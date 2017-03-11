@@ -1,2 +1,2 @@
-# asperw.github.io
-Repository for my personal website
+# personal-website (asperw.github.io)
+Repository for my personal website @ http://asperw.me
