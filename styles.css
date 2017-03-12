@@ -77,7 +77,7 @@ div.info{
 #containers div{
   background: white;
   color: #333;
-  height: 44em;
+  height: 45em;
   margin: 0;
   padding: 25px 50px 10px 50px;
 }
@@ -98,6 +98,11 @@ div.info{
   float: left;
   height: 32px;
   margin-right: 48px;
+}
+
+#survey a{
+  color: white;
+  text-decoration: none;
 }
 
 /*With Instagram spritesheet. Remove img tag in html.*/
