@@ -9,7 +9,8 @@ body{
   font-family: Arial, sans-serif;
   font-size: 1em;
   margin: 0 auto;
-  padding: 5em 50px 1em 50px;
+  /*34px is 50 less half of icon size*/
+  padding: 34px 50px 1em 50px;
   width: 70%;
 }
 h1{
