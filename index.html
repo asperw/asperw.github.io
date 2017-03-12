@@ -1,21 +1,85 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="description" content="This is my website.">
-  <title>Home | William Asper</title>
+  <title>Hello | William Asper</title>
   <link rel="stylesheet" href="styles.css" type="text/css">
+  <script src="tabs.js"></script>
 </head>
+
 <body>
-  <h1><center>Hello world</center></h1>
-  <p><center>Website under construction</center></p>
-  <p><center><a href="about.html" title="About me">About me</a></center></p>
-  <p><center><img src="images\wgb.gif" width="195" height="229" alt="We're not impressed">
-    <img src="images\wwb.gif" width="350" height="229" alt="We aren't impressed either"></center>
-  </p>
-  <footer>
-    <p><center>Website authored by me, 2017</center></p>
-  </footer>
+  <div id="links">
+    <ul>
+      <li id="github"><img src="images\GitHub-Mark-Light-32px.png" width="32" height="32" alt="Link to GitHub" href="https://github.com/asperw"></li>
+      <li id="instagram"><a href="https://www.instagram.com/asperw/" target="_blank"></a></li>
+    </ul>
+  </div>
+  <div class="info">
+    <div id="tabContainer">
+      <div id="tabs">
+        <ul>
+          <li id="tab1"><a href="#tabPane1">Education</a></li>
+          <li id="tab2"><a href="#tabPane2">Work</a></li>
+          <li id="tab3"><a href="#tabPane3">Projects</a></li>
+          <li id="tldrTab"><a href="#tldr">tl;dr</a></li>
+          <li id="homeTab"><a href="#home">Home</a></li>
+        </ul>
+      </div>
+      <div id="containers">
+        <div id="tabPane1">
+          <h3>Education</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque orci turpis,
+            varius quis commodo ut, viverra in mi. In vitae malesuada arcu, quis scelerisque odio.
+            Pellentesque id metus ac purus finibus interdum in fringilla augue. Nullam suscipit eu
+            felis eget hendrerit. Nam fringilla odio sit amet lorem ornare, in dignissim diam tempor.
+            Sed nec est tincidunt orci posuere ultrices. Suspendisse vel lectus efficitur, euismod
+            sapien at, dignissim lectus. Mauris ultricies feugiat justo, id ultrices nunc accumsan ac.
+          </p>
+        </div>
+        <div id="tabPane2">
+          <h3>Work</h3>
+          <p>
+            Phasellus posuere leo eget eros laoreet, ac rhoncus justo hendrerit. Fusce malesuada
+            ornare aliquet. Nunc mollis ante justo, quis eleifend arcu ornare a. Nullam cursus vulputate
+            mollis. Nullam a auctor nibh. Nam odio magna, varius vitae magna et, vehicula interdum erat.
+            Pellentesque eget fermentum ex. Curabitur et viverra metus. Suspendisse potenti. Class aptent
+            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed imperdiet
+            vitae nunc vitae porttitor. Aliquam ultrices eu felis vitae sodales. Mauris eget ultricies
+            enim, vitae interdum justo. Donec rhoncus accumsan mi sed auctor. Class aptent taciti sociosqu
+            ad litora torquent per conubia nostra, per inceptos himenaeos.
+          </p>
+        </div>
+        <div id="tabPane3">
+          <h3>Projects</h3>
+          <p>
+            Donec rutrum justo id ex hendrerit, vel pharetra metus dictum. Nunc venenatis, ligula ac
+            faucibus laoreet, purus massa consectetur felis, eu porta est erat id sapien. Donec vel
+            dapibus tellus, congue blandit erat. Nam eget libero ligula. Pellentesque ex purus,
+            sollicitudin vel justo vel, vulputate pulvinar ligula. Vivamus a scelerisque nulla. Sed
+            sit amet libero nulla. Suspendisse arcu arcu, dictum eget felis vel, auctor consectetur
+            ex. Phasellus ornare leo sagittis nisi cursus, eu lacinia dolor fermentum.
+          </p>
+        </div>
+        <div id="tldr">
+          <h3>tl;dr</h3>
+          <p>
+            I am a computer engineering (proposed) major with a concentration in robotics
+            and control at the University of California, Santa Cruz.
+          </p>
+        </div>
+        <div id="home">
+          <h1>Hello world</h1>
+          <p>
+            Website under construction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
