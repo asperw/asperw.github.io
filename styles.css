@@ -79,13 +79,29 @@ div.info{
   color: #333;
   height: 44em;
   margin: 0;
-  padding: 10px 50px 10px 50px;
+  padding: 25px 50px 10px 50px;
 }
 #tabs a{
   color: black;
   text-decoration: none;
 }
 
+/*With Instagram dedicated icon.*/
+#links > ul{
+  font-size: 1em;
+  height: 32px;
+  list-style: none;
+  padding: 16px 0 16px 0;
+}
+#links > ul > li{
+  display: block;
+  float: left;
+  height: 32px;
+  margin-right: 48px;
+}
+
+/*With Instagram spritesheet. Remove img tag in html.*/
+/*
 #links > ul{
   position: relative;
 }
@@ -114,21 +130,5 @@ div.info{
   background: url("images/eb5eb7.png") -103px -179px;
   left: -50px;
   width: 32px;
-}
-
-/*
-#links{
-  position: relative;
-}
-#links li{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
-}
-#links li, #links a{
-  display: block;
-  height: 32px;
 }
 */
