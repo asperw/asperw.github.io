@@ -2,6 +2,7 @@ html{
   background: #777;
   margin: 0;
   padding: 0;
+  width: 100em;
 }
 @font-face {
   font-family: "BlackOpsOne-Regular";
@@ -14,11 +15,11 @@ body{
   font-size: 1em;
   margin: 0 auto;
   padding: 2em;
-  width: 70%;
+  width: 70em;
 }
 h1{
   font-family: "BlackOpsOne-Regular", Georgia, serif;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: normal;
 }
 p{
@@ -115,7 +116,7 @@ div.info{
 }
 #links h1{
   color: white;
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 0;
 }
 
