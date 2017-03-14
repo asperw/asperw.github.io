@@ -3,46 +3,53 @@ html{
   margin: 0;
   padding: 0;
 }
+@font-face {
+  font-family: "BlackOpsOne-Regular";
+  src: url("fonts/Black_Ops_One/BlackOpsOne-Regular.ttf");
+}
 body{
   background: #2e2e2e;
-  border-bottom: 10px solid gold;
-  font-family: Arial, sans-serif;
+  border-bottom: .3em solid gold;
+  font-family: Georgia, serif;
   font-size: 1em;
   margin: 0 auto;
-  /*34px is 50 less half of icon size*/
-  padding: 34px 50px 1em 50px;
+  padding: 2em;
   width: 70%;
 }
 h1{
-  font-family: Georgia, serif;
+  font-family: "BlackOpsOne-Regular", Georgia, serif;
   font-size: 2em;
-  font-style: italic;
   font-weight: normal;
 }
 p{
   line-height: 1.5;
   margin: 0;
-  margin-bottom: 1em;
   text-align: justify;
+  text-indent: 2em;
 }
 
 div.info{
   background: #2e2e2e;
   border-radius: 8px;
-  float: center;
   height: 50em;
   width: 100%;
+}
+#tabContainer{
+  height: 50em;
 }
 #tabContainer h3{
   color: rgb(83, 104, 138);
   font-size: 2em;
 }
 #tabs{
-  height: 30px;
+  height: 2em;
   overflow: hidden;
 }
+
+/*tab labels*/
 #tabs > ul{
   font-size: 1em;
+  font-family: Arial, sans-serif;
   list-style: none;
 }
 #tabs ul, #tabs li, #links ul, #links li{
@@ -57,7 +64,7 @@ div.info{
   display: block;
   float: right;
   margin-left: 2px;
-  padding: 5px 15px;
+  padding: .5em 1em;
 }
 #tldrTab{
   margin: 0 18px 0 0 !important;
@@ -74,12 +81,15 @@ div.info{
   background: white;
   cursor: pointer;
 }
+#containers{
+  height: 48em;
+}
 #containers div{
   background: white;
   color: #333;
-  height: 45em;
+  height: 46em;
   margin: 0;
-  padding: 25px 50px 10px 50px;
+  padding: 2em 50px 0 50px;
 }
 #tabs a{
   color: black;
@@ -89,51 +99,33 @@ div.info{
 /*With Instagram dedicated icon.*/
 #links > ul{
   font-size: 1em;
-  height: 32px;
+  height: 2em;
   list-style: none;
-  padding: 16px 0 16px 0;
+  padding: 0 0 2em 0;
 }
 #links > ul > li{
   display: block;
   float: left;
-  height: 32px;
-  margin-right: 48px;
+  height: 2em;
+  margin-right: 3em;
+}
+#homeLink{
+  width: 50%;
+  margin: 0 auto;
+}
+#links h1{
+  color: white;
+  font-size: 3em;
+  margin: 0;
+}
+
+#courses{
+  line-height: 1.5;
+  margin: 0;
+  text-align: justify;
 }
 
 #survey a{
   color: white;
   text-decoration: none;
 }
-
-/*With Instagram spritesheet. Remove img tag in html.*/
-/*
-#links > ul{
-  position: relative;
-}
-#links a{
-  display: block;
-  height: 32px;
-}
-#links > ul{
-  font-size: 1em;
-  height: 32px;
-  list-style: none;
-  padding: 16px;
-}
-#links > ul > li{
-  display: block;
-  float: left;
-  height: 32px;
-  margin-left: 50px;
-  position: absolute;
-  top: 16px;
-}
-#github{
-  margin-left: 65px;
-}
-#instagram{
-  background: url("images/eb5eb7.png") -103px -179px;
-  left: -50px;
-  width: 32px;
-}
-*/
