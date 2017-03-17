@@ -1,0 +1,7 @@
+#.gitignore
+
+p5/addons/*
+p5.min.js
+
+
+.DS_Store
