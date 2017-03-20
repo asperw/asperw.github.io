@@ -1,152 +1,178 @@
 html{
-  background: #777;
-  margin: 0 auto;
-  padding: 0;
-  width: 100em;
+    background: #777;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 @font-face {
-  font-family: "BlackOpsOne-Regular";
-  src: url("fonts/Black_Ops_One/BlackOpsOne-Regular.ttf");
+    font-family: "BlackOpsOne-Regular";
+    src: url("fonts/Black_Ops_One/BlackOpsOne-Regular.ttf");
 }
 @font-face {
-  font-family: "Faster_One";
-  src: url("fonts/Faster_One/FasterOne-Regular.ttf");
+    font-family: "Faster_One";
+    src: url("fonts/Faster_One/FasterOne-Regular.ttf");
 }
 @font-face {
-  font-family: "Monofett";
-  src: url("fonts/Monofett/Monofett.ttf");
+    font-family: "Monofett";
+    src: url("fonts/Monofett/Monofett.ttf");
 }
 @font-face {
-  font-family: "Press_Start_2P";
-  src: url("fonts/Press_Start_2P/PressStart2P-Regular.ttf");
+    font-family: "Press_Start_2P";
+    src: url("fonts/Press_Start_2P/PressStart2P-Regular.ttf");
 }
 @font-face {
-  font-family: "VT323";
-  src: url("fonts/VT323/VT323-Regular.ttf");
+    font-family: "VT323";
+    src: url("fonts/VT323/VT323-Regular.ttf");
 }
+
+#sketch-holder{
+    height: 100px;
+    width: 100px;
+
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
 body{
-  background: #2e2e2e;
-  border-bottom: .3em solid gold;
-  font-family: Georgia, serif;
-  font-size: 1em;
-  margin: 0 auto;
-  padding: 2em;
-  width: 70em;
+    background: #2e2e2e;
+    /*border-bottom: .3em solid gold;*/
+    font-family: Georgia, serif;
+    font-size: 1em;
+    margin: 0 auto;
+    padding: 2em;
+    width: 70em;
 }
 h1{
-  font-family: "Press_Start_2P", Georgia, serif;
-  font-size: 1em;
-  font-weight: normal;
+    font-family: "Press_Start_2P", Georgia, serif;
+    font-size: 1em;
+    font-weight: normal;
 }
 p{
-  line-height: 1.5;
-  margin: 0;
-  text-align: justify;
-  text-indent: 2em;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+    text-indent: 2em;
 }
 
 div.info{
-  background: #2e2e2e;
-  border-radius: 8px;
-  height: 50em;
-  width: 100%;
+    background: #2e2e2e;
+    border-radius: 8px;
+    height: 50em;
+    width: 100%;
 }
 #tabContainer{
-  height: 50em;
+    height: 50em;
 }
 #tabContainer h3{
-  color: rgb(83, 104, 138);
-  font-size: 2em;
+    color: rgb(83, 104, 138);
+    font-size: 2em;
 }
 #tabs{
-  height: 2em;
-  overflow: hidden;
+    height: 2em;
+    overflow: hidden;
 }
 
 /*tab labels*/
 #tabs > ul{
-  font-size: 1em;
-  font-family: Arial, sans-serif;
-  list-style: none;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    list-style: none;
 }
 #tabs ul, #tabs li, #links ul, #links li{
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 #tabs > ul > li{
-  background: #CCC;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  color: #FFF;
-  display: block;
-  float: right;
-  margin-left: 2px;
-  padding: .5em 1em;
+    background: #CCC;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #FFF;
+    display: block;
+    float: right;
+    margin-left: 2px;
+    padding: .5em 1em;
 }
 #tldrTab{
-  margin: 0 14px 0 0 !important;
+    margin: 0 14px 0 0 !important;
 }
 #homeTab{
-  float: left !important;
-  margin: 0 !important;
+    float: left !important;
+    margin: 0 !important;
 }
 #tabs > ul > li:hover{
-  background: white;
-  cursor: pointer;
+    background: white;
+    cursor: pointer;
 }
 #tabs > ul > .active{
-  background: white;
-  cursor: pointer;
+    background: white;
+    cursor: pointer;
 }
 #tabs a{
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 #containers{
-  height: 48em;
+    height: 48em;
 }
 #containers div{
-  background: white;
-  color: #333;
-  height: 46em;
-  margin: 0;
-  padding: 2em 50px 0 50px;
+    background: white;
+    color: #333;
+    height: 46em;
+    margin: 0;
+    padding: 2em 50px 0 50px;
 }
 
 /*link icons*/
 #links > ul{
-  font-size: 1em;
-  height: 2em;
-  list-style: none;
-  padding-bottom: 2em;
+    font-size: 1em;
+    height: 2em;
+    list-style: none;
+    padding-bottom: 2em;
 }
 #links > ul > li{
-  display: block;
-  float: left;
-  height: 2em;
-  margin-right: 3em;
+    display: block;
+    float: left;
+    height: 2em;
+    margin-right: 3em;
 }
 
 /*title*/
-#homeLink{
-  margin: auto !important;
-  text-align: center;
-  width: 50%;
+#home{
+    margin: auto !important;
+    text-align: center;
+    width: 50%;
 }
 #links h1{
-  color: white;
-  font-size: 3em;
-  margin: 0;
+    color: white;
+    font-size: 3em;
+    margin: 0;
 }
 
 #courses{
-  line-height: 1.5;
-  margin: 0;
-  text-align: justify;
+    display: block;
+    float: left;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+}
+#languages{
+    display: block;
+    float: right;
+    line-height: 1.5;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 #survey a{
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }

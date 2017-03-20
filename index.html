@@ -3,95 +3,105 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="This is my website.">
-  <title>Hello | William Asper</title>
-  <link rel="stylesheet" href="styles.css" type="text/css">
-  <script src="tabs.js"></script>
+    <meta charset="utf-8">
+    <meta name="description" content="This is my website.">
+    <title>Hello | William Asper</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script language="javascript" type="text/javascript" src="tabs.js"></script>
+    <script language="javascript" type="text/javascript" src="p5/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="background.js"></script>
 </head>
 
-<body>
-  <div id="links">
-    <ul>
-      <li id="github"><a href="https://github.com/asperw" target="_blank">
-        <img src="images\github.png" width="32px" height="32px" alt="Link to GitHub profile"></a>
-      </li>
-      <li id="instagram"><a href="https://www.instagram.com/asperw/" target="_blank">
-        <img src="images\instagram.png" width="32px" height="32px" alt"Link to Instagram profile"></a>
-      </li>
-      <li id="hackaday"><a href="https://hackaday.io/asperw" target="=_blank">
-        <img src="images\had.png" width="32px" alt="Link to Hackaday.io profile"></a>
-      </li>
-      <h1 id="homeLink">asperw.me</h1>
-    </ul>
-  </div>
-  <div class="info">
-    <div id="tabContainer">
-      <div id="tabs">
+<body id="body">
+    <div id="sketch-holder"></div>
+    <div id="links">
         <ul>
-          <li id="educationTab"><a href="#tabPane1">Education</a></li>
-          <li id="workTab"><a href="#tabPane2">Work</a></li>
-          <li id="projectsTab"><a href="#tabPane3">Projects</a></li>
-          <li id="tldrTab"><a href="#tabPane4">tl;dr</a></li>
-          <li id="homeTab"><a href="#tabPane5">Home</a></li>
+            <li id="github"><a href="https://github.com/asperw" target="_blank">
+                <img src="images\github.png" width="32px" height="32px" alt="Link to GitHub profile"></a>
+            </li>
+            <li id="instagram"><a href="https://www.instagram.com/asperw/" target="_blank">
+                <img src="images\instagram.png" width="32px" height="32px" alt"Link to Instagram profile"></a>
+            </li>
+            <li id="hackaday"><a href="https://hackaday.io/asperw" target="=_blank">
+                <img src="images\had.png" width="32px" alt="Link to Hackaday.io profile"></a>
+            </li>
+            <h1 id="home">asperw.me</h1>
         </ul>
-      </div>
-      <div id="containers">
-        <div id="tabPane1">
-          <h3>Education</h3>
-          <p>Current student at the University of California, Santa Cruz. (UCSC)</p>
-          <h4>Relevant courses completed at UCSC:</h4>
-          <ul id="courses">
-            <li>CMPS 12B/L Intro to Data Structures (C, Java)</li>
-            <li>CMPE 12/L Computer Systems and Assembly Language (C)
-            <li>CMPS 12A/L Intro to Programming (Accelerated) (Java)</li>
-            <li>CMPS 5P Intro to Programming (Python)</li>
-            <li>CMPE 8/L Robot Automation: Intelligence through Feedback Control (Matlab, Spin)</li>
-          </ul>
-        </div>
-        <div id="tabPane2">
-          <h3>Work</h3>
-          <p>
-            Phasellus posuere leo eget eros laoreet, ac rhoncus justo hendrerit. Fusce malesuada
-            ornare aliquet. Nunc mollis ante justo, quis eleifend arcu ornare a. Nullam cursus vulputate
-            mollis. Nullam a auctor nibh. Nam odio magna, varius vitae magna et, vehicula interdum erat.
-            Pellentesque eget fermentum ex. Curabitur et viverra metus. Suspendisse potenti. Class aptent
-            taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed imperdiet
-            vitae nunc vitae porttitor. Aliquam ultrices eu felis vitae sodales. Mauris eget ultricies
-            enim, vitae interdum justo. Donec rhoncus accumsan mi sed auctor. Class aptent taciti sociosqu
-            ad litora torquent per conubia nostra, per inceptos himenaeos.
-          </p>
-        </div>
-        <div id="tabPane3">
-          <h3>Projects</h3>
-          <p>
-            Donec rutrum justo id ex hendrerit, vel pharetra metus dictum. Nunc venenatis, ligula ac
-            faucibus laoreet, purus massa consectetur felis, eu porta est erat id sapien. Donec vel
-            dapibus tellus, congue blandit erat. Nam eget libero ligula. Pellentesque ex purus,
-            sollicitudin vel justo vel, vulputate pulvinar ligula. Vivamus a scelerisque nulla. Sed
-            sit amet libero nulla. Suspendisse arcu arcu, dictum eget felis vel, auctor consectetur
-            ex. Phasellus ornare leo sagittis nisi cursus, eu lacinia dolor fermentum.
-          </p>
-        </div>
-        <div id="tabPane4">
-          <h3>tl;dr</h3>
-          <p>
-            I am a computer engineering (proposed) major with a concentration in robotics
-            and control at the University of California, Santa Cruz.
-          </p>
-        </div>
-        <div id="tabPane5">
-          <h3>Hello world</h3>
-          <center style="margin-bottom: 2em;">Website under construction.</center>
-          <center><img src="images\wgb.gif" width="195" height="229" alt="We're not impressed">
-            <img src="images\wwb.gif" width="350" height="229" alt="We aren't impressed either">
-          </center>
-        </div>
-      </div>
     </div>
-  </div>
-  <footer>
-    <!--<center id="survey"><a href="about.html">Feedback</a></center>-->
-  </footer>
+    <div class="info">
+        <div id="tabContainer">
+            <div id="tabs">
+                <ul>
+                    <li id="educationTab"><a href="#tabPane1">Education</a></li>
+                    <li id="workTab"><a href="#tabPane2">Work</a></li>
+                    <li id="projectsTab"><a href="#tabPane3">Projects</a></li>
+                    <li id="tldrTab"><a href="#tabPane4">tl;dr</a></li>
+                    <li id="homeTab"><a href="#tabPane5">Home</a></li>
+                </ul>
+            </div>
+            <div id="containers">
+                <div id="tabPane1">
+                    <h3>Education</h3>
+                    <p>Current student at the University of California, Santa Cruz. (UCSC)</p>
+                    <h4>Relevant courses completed at UCSC:</h4>
+                    <ul id="courses">
+                        <li>CMPS 12B/L Intro to Data Structures</li>
+                        <li>CMPE 12/L Computer Systems and Assembly Language</li>
+                        <li>CMPS 12A/L Intro to Programming (Accelerated)</li>
+                        <li>CMPS 5P Intro to Programming</li>
+                        <li>CMPE 8/L Robot Automation: Intelligence through Feedback Control</li>
+                    </ul>
+                    <ul id="languages">
+                        <li>(C, Java)</li>
+                        <li>(C)</li>
+                        <li>(Java)</li>
+                        <li>(Python)</li>
+                        <li>(Matlab, Spin)</li>
+                    </ul>
+                </div>
+                <div id="tabPane2">
+                    <h3>Work</h3>
+                    <p>
+                        Phasellus posuere leo eget eros laoreet, ac rhoncus justo hendrerit. Fusce malesuada
+                        ornare aliquet. Nunc mollis ante justo, quis eleifend arcu ornare a. Nullam cursus vulputate
+                        mollis. Nullam a auctor nibh. Nam odio magna, varius vitae magna et, vehicula interdum erat.
+                        Pellentesque eget fermentum ex. Curabitur et viverra metus. Suspendisse potenti. Class aptent
+                        taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed imperdiet
+                        vitae nunc vitae porttitor. Aliquam ultrices eu felis vitae sodales. Mauris eget ultricies
+                        enim, vitae interdum justo. Donec rhoncus accumsan mi sed auctor. Class aptent taciti sociosqu
+                        ad litora torquent per conubia nostra, per inceptos himenaeos.
+                    </p>
+                </div>
+                <div id="tabPane3">
+                    <h3>Projects</h3>
+                    <p>
+                        Donec rutrum justo id ex hendrerit, vel pharetra metus dictum. Nunc venenatis, ligula ac
+                        faucibus laoreet, purus massa consectetur felis, eu porta est erat id sapien. Donec vel
+                        dapibus tellus, congue blandit erat. Nam eget libero ligula. Pellentesque ex purus,
+                        sollicitudin vel justo vel, vulputate pulvinar ligula. Vivamus a scelerisque nulla. Sed
+                        sit amet libero nulla. Suspendisse arcu arcu, dictum eget felis vel, auctor consectetur
+                        ex. Phasellus ornare leo sagittis nisi cursus, eu lacinia dolor fermentum.
+                    </p>
+                </div>
+                <div id="tabPane4">
+                    <h3>tl;dr</h3>
+                    <p>
+                        I am a computer engineering (proposed) major with a concentration in robotics
+                        and control at the University of California, Santa Cruz.
+                    </p>
+                </div>
+                <div id="tabPane5">
+                    <h3>Hello world</h3>
+                    <center style="margin-bottom: 2em;">Website under construction.</center>
+                    <center><img src="images\wgb.gif" width="195" height="229" alt="We're not impressed">
+                        <img src="images\wwb.gif" width="350" height="229" alt="We aren't impressed either">
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!--<center id="survey"><a href="about.html">Feedback</a></center>-->
+    </footer>
 </body>
 </html>
