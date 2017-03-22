@@ -6,6 +6,7 @@ var numRows;
 var radius;
 var diameter;
 
+var windowWidth;
 var canvasHeight;
 
 var pallet = ["#2E2E2E", "#7F7F7F", "#FFFFFF", "#404040", "#BFBFBF", "#ADE8AD", "#E0FFE4"];
@@ -18,23 +19,24 @@ function getRandom(min, max){
 
 //called once on window load
 function setup(){
-    canvasHeight = document.body.clientHeight - height - 4;
+    windowWidth = window.innerWidth;
+    canvasHeight = document.body.clientHeight;
 
-    var canvas = createCanvas(window.innerWidth, canvasHeight); //size(1440, 900);
+    var canvas = createCanvas(windowWidth, canvasHeight); //size(1440, 900);
 
     canvas.parent("sketch-holder");
 
     canvas.id("background-canvas");
 
-    //smooth();
+    smooth();
     stroke("#222222");
 
-    radius = 15;
+    radius = int(windowWidth / 100);
     diameter = radius * 2;
 
     //setting length and width of 2-d array of hexagons
-    numColumns = int(width / (sqrt(3) * radius)) + 1;
-    numRows = int(height / (.75 * diameter)) + 1;
+    numColumns = int(width / (sqrt(3) * radius)) + 2;
+    numRows = int(height / (.75 * diameter)) + 2;
 
     //create grid of hexagons object
     grid = new Grid(numColumns, numRows, radius);
@@ -85,14 +87,6 @@ function Hexagon(center, radius){
     this.angle = 6.28 / 6;
     this.startAngle = 3.14 / 6;
 
-    /*
-    constructor(center, radius){
-        this.r = radius;
-        this.x = center[0];
-        this.y = center[1];
-    }
-    */
-
     this.display = function(){
 
         //noStroke();
@@ -135,16 +129,6 @@ function Grid(numColumns, numRows, radius){
         this.hexagons[i] = new Array(numRows);
     }
 
-    /*
-    function Grid(numColumns, numRows, radius){
-
-        this.columns = numColumns;
-        this.rows = numRows;
-        this.r = radius;
-        console.log(numColumns);
-    }
-    */
-
     //starts the first hexagon at the corner of the canvas
     this.center = [0, 0];
 
@@ -183,12 +167,18 @@ function Grid(numColumns, numRows, radius){
 }
 
 function windowResized(){
+    windowWidth = window.innerWidth;
     canvasHeight = document.body.clientHeight;
-    resizeCanvas(window.innerWidth, canvasHeight);
 
-    numColumns = int(width / (sqrt(3) * radius)) + 1;
-    numRows = int(height / (.75 * diameter)) + 1;
+    radius = int(windowWidth / 100);
+    diameter = radius * 2;
+
+    resizeCanvas(windowWidth, canvasHeight);
+
+    numColumns = int(width / (sqrt(3) * radius)) + 2;
+    numRows = int(height / (.75 * diameter)) + 2;
 
     grid = new Grid(numColumns, numRows, radius);
+
     initials();
 }
