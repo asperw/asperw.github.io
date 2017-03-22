@@ -9,7 +9,9 @@ var diameter;
 var windowWidth;
 var canvasHeight;
 
-var pallet = ["#2E2E2E", "#7F7F7F", "#FFFFFF", "#404040", "#BFBFBF", "#ADE8AD", "#E0FFE4"];
+var palletLength = 6;
+var pallet = ["#2E2E2E", "#ADE8AD", "#5F7F5F", "#BEFFBE", "#304030", "#ABE5AB"];
+//var pallet = ["#2E2E2E", "#7F7F7F", "#FFFFFF", "#404040", "#BFBFBF", "#ADE8AD", "#E0FFE4"];
 
 function getRandom(min, max){
     min = Math.ceil(min);
@@ -29,7 +31,8 @@ function setup(){
     canvas.id("background-canvas");
 
     smooth();
-    stroke("#222222");
+    noStroke();
+    //stroke("#222222");
 
     radius = int(windowWidth / 100);
     diameter = radius * 2;
@@ -63,7 +66,7 @@ function draw(){
     //randomly pick 15 hexagons from the grid and randomly assign them a new color
     for(var i = 0; i < 50; i++){
         var selected = grid.getHexagon(getRandom(0, numColumns), getRandom(0, numRows));
-        selected.setFillColor(pallet[getRandom(0, 7)]);
+        selected.setFillColor(pallet[getRandom(0, palletLength)]);
     }
 }
 
@@ -72,7 +75,7 @@ function initials(){
     for(var i = 0; i < numColumns; i++){
         for(var j = 0; j < numRows; j++){
             var selected = grid.getHexagon(i, j);
-            selected.setFillColor(pallet[getRandom(0, 7)]);
+            selected.setFillColor(pallet[getRandom(0, palletLength)]);
         }
     }
 }
