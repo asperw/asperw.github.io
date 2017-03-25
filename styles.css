@@ -1,15 +1,12 @@
 html{
     background: #777777;
-    height: 100%;
-    margin: 0 auto;
-    overflow: hidden;
+    height: 50em;
+    margin: 0;
+    overflow-x: hidden;
     padding: 0;
     width: 100%;
-    /*
-    overflow-x: hidden;
-    overflow-y: hidden;
-    */
 }
+
 @font-face {
     font-family: "BlackOpsOne-Regular";
     src: url("fonts/Black_Ops_One/BlackOpsOne-Regular.ttf");
@@ -32,18 +29,14 @@ html{
 }
 
 #sketch-holder{
-    height: 100px;
-    width: 100px;
-
     margin: 0;
     padding: 0;
 
     position: absolute;
-
     left: 0;
     top: 0;
+
     z-index: -1;
-    /*box-sizing: border-box;*/
 }
 
 body{
@@ -53,10 +46,13 @@ body{
     border-right: .3em solid #ADE8AD;
     font-family: Georgia, serif;
     font-size: 1em;
+    /*for centering in the parent element*/
     margin: 0 auto;
+    min-width: 1024px;
     height: 100%;
-    width: 70em;
+    width: 70%;
 }
+/*title*/
 h1{
     font-family: "Press_Start_2P", Georgia, serif;
     font-size: 1em;
@@ -70,7 +66,8 @@ p{
 }
 
 div.info{
-    background: #2e2e2e;
+    /*area between and under tabs*/
+    background: #2E2E2E;
     border-radius: 8px;
     height: inherit;
     width: 100%;
@@ -81,6 +78,7 @@ div.info{
     padding-right: 2em;
 }
 #tabContainer h3{
+    /*tab heading color*/
     color: rgb(83, 104, 138);
     font-size: 2em;
 }
@@ -91,8 +89,8 @@ div.info{
 
 /*tab labels*/
 #tabs > ul{
-    font-size: 1em;
     font-family: Arial, sans-serif;
+    font-size: 1em;
     list-style: none;
 }
 #tabs ul, #tabs li, #links ul, #links li{
@@ -100,10 +98,9 @@ div.info{
     padding: 0;
 }
 #tabs > ul > li{
-    background: #CCC;
+    background: #CCCCCC;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    color: #FFF;
     display: block;
     float: right;
     margin-left: 2px;
@@ -146,15 +143,11 @@ div.info{
 
 /*link icons*/
 #links{
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 2em;
+    padding: 2em;
 }
 #links > ul{
-    font-size: 1em;
     height: 2em;
     list-style: none;
-    padding-bottom: 2em;
 }
 #links > ul > li{
     display: block;
@@ -172,7 +165,6 @@ div.info{
 #links h1{
     color: white;
     font-size: 3em;
-    margin: 0;
 }
 
 #courses{

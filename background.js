@@ -22,7 +22,8 @@ function getRandom(min, max){
 //called once on window load
 function setup(){
     windowWidth = window.innerWidth;
-    canvasHeight = document.body.clientHeight;
+    //canvasHeight = document.body.clientHeight;
+    canvasHeight = window.innerHeight;
 
     var canvas = createCanvas(windowWidth, canvasHeight); //size(1440, 900);
 
@@ -31,8 +32,8 @@ function setup(){
     canvas.id("background-canvas");
 
     smooth();
-    noStroke();
-    //stroke("#222222");
+    //noStroke();
+    stroke("#333333");
 
     radius = int(windowWidth / 100);
     diameter = radius * 2;
@@ -171,7 +172,8 @@ function Grid(numColumns, numRows, radius){
 
 function windowResized(){
     windowWidth = window.innerWidth;
-    canvasHeight = document.body.clientHeight;
+    //canvasHeight = document.body.clientHeight;
+    canvasHeight = window.innerHeight;
 
     radius = int(windowWidth / 100);
     diameter = radius * 2;
