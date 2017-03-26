@@ -5252,7 +5252,7 @@ exports.sizeOf = sizeOf;
 
     function timedOut() {
       self._timedOut = true
-      self.request.abort()      
+      self.request.abort()
     }
 
     function error(resp, msg, t) {
@@ -8967,8 +8967,8 @@ var p5 = function(sketch, node, sync) {
   this._loop = true;
   this._styles = [];
   this._defaultCanvasSize = {
-    width: 100,
-    height: 100
+    width: 0,
+    height: 0
   };
   this._events = { // keep track of user-events for unregistering later
     'mousemove': null,
