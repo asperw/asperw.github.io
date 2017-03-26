@@ -1,17 +1,20 @@
 //drawing hexagons in Javascript
 
 var grid;
+
 var numColumns;
 var barWidth;
 var numRows;
+
 var radius;
 var diameter;
 
 var windowWidth;
 var canvasHeight;
 
-var palletLength = 6;
-var pallet = ["#2E2E2E", "#ADE8AD", "#5F7F5F", "#BEFFBE", "#304030", "#ABE5AB"];
+var palletLength = 5;
+var pallet = ["#2D384A", "#81A2D6", "#53688A", "#5B7297", "#445570"]
+//var pallet = ["#2E2E2E", "#ADE8AD", "#5F7F5F", "#BEFFBE", "#304030", "#ABE5AB"];
 //var pallet = ["#2E2E2E", "#7F7F7F", "#FFFFFF", "#404040", "#BFBFBF", "#ADE8AD", "#E0FFE4"];
 
 function getRandom(min, max){
@@ -53,7 +56,8 @@ function setup(){
 
     grid.display();
 
-    frameRate(30);
+    frameRate(10);
+    //console.log("http:asperw.me");
 }
 
 function draw(){
@@ -62,6 +66,7 @@ function draw(){
     //randomly pick 15 hexagons from the grid and randomly assign them a new color
     for(var i = 0; i < 50; i++){
         var selected = grid.randomHexagon();
+        //selected.lerpTheColor(selected);
         selected.setFillColor(pallet[getRandom(0, palletLength)]);
         selected.display();
     }
@@ -69,9 +74,13 @@ function draw(){
 
 function initials(){
     //randomly set initial color of the hexagons
-    for(var i = 0; i < numColumns; i++){
-        for(var j = 0; j < numRows; j++){
-            var selected = grid.randomHexagon(i, j);
+    for(var i = 0; i < numRows; i++){
+        for(var j = 0; j < barWidth; j++){
+            var selected = grid.getHexagon(j, i);
+            selected.setFillColor(pallet[getRandom(0, palletLength)]);
+        }
+        for(var k = numColumns - barWidth; k < numColumns; k++){
+            var selected = grid.getHexagon(k, i);
             selected.setFillColor(pallet[getRandom(0, palletLength)]);
         }
     }
@@ -116,6 +125,20 @@ function Hexagon(center, radius){
     this.setFillColor = function(setColor){
         this.c = setColor;
     }
+
+    /*
+    this.lerpTheColor = function(selection){
+        this.selection = selection;
+        this.oldColor = color(selection.c);
+        console.log(this.oldColor);
+        this.newColor = color(pallet[getRandom(0, palletLength)]);
+        console.log(this.newColor);
+        for(var i = 0; i < 4; i++){
+            this.c = lerpColor(this.oldColor, this.newColor, i * 0.33);
+            selection.display();
+        }
+    }
+    */
 }
 
 function Grid(numColumns, numRows, radius){

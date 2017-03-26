@@ -45,8 +45,8 @@ html{
 body{
     align-items: center;
     background: #2E2E2E;
-    border-left: .3em solid #ADE8AD;
-    border-right: .3em solid #ADE8AD;
+    border-left: .3em solid #53688A;
+    border-right: .3em solid #53688A;
     display: flex;
     flex-direction: column;
     font-family: Georgia, serif;
