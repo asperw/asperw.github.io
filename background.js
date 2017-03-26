@@ -2,6 +2,7 @@
 
 var grid;
 var numColumns;
+var barWidth;
 var numRows;
 var radius;
 var diameter;
@@ -36,39 +37,33 @@ function setup(){
     //noStroke();
     stroke("#333333");
 
-    radius = int(windowWidth / 100);
+    radius = int(height / 67); //so there will be 50 along the height
     diameter = radius * 2;
 
     //setting length and width of 2-d array of hexagons
     numColumns = int(width / (sqrt(3) * radius)) + 2;
     numRows = int(height / (.75 * diameter)) + 2;
 
+    barWidth = int((0.2 * windowWidth) / diameter) + 1;
+
     //create grid of hexagons object
     grid = new Grid(numColumns, numRows, radius);
 
-    initials();
-    /*
-    //randomly set initial color of the hexagons
-    for(var i = 0; i < numColumns; i++){
-        for(var j = 0; j < numRows; j++){
-            var selected = grid.getHexagon(i, j);
-            selected.setFillColor(pallet[getRandom(0, 7)]);
-        }
-    }
-    */
+    initials(); //set initial colors randomly
 
     grid.display();
 
-    frameRate(1);
+    frameRate(30);
 }
 
 function draw(){
-    grid.display();
+    //grid.display();
 
     //randomly pick 15 hexagons from the grid and randomly assign them a new color
     for(var i = 0; i < 50; i++){
-        var selected = grid.getHexagon(getRandom(0, numColumns), getRandom(0, numRows));
+        var selected = grid.randomHexagon();
         selected.setFillColor(pallet[getRandom(0, palletLength)]);
+        selected.display();
     }
 }
 
@@ -76,7 +71,7 @@ function initials(){
     //randomly set initial color of the hexagons
     for(var i = 0; i < numColumns; i++){
         for(var j = 0; j < numRows; j++){
-            var selected = grid.getHexagon(i, j);
+            var selected = grid.randomHexagon(i, j);
             selected.setFillColor(pallet[getRandom(0, palletLength)]);
         }
     }
@@ -130,35 +125,50 @@ function Grid(numColumns, numRows, radius){
     this.r = radius;
     this.hexagons = []; //Hexagon[][] hexagons;
 
+    this.selector;
+    this.row;
+
     for(var i = 0; i < numColumns; i++){
         this.hexagons[i] = new Array(numRows);
     }
 
     //starts the first hexagon at the corner of the canvas
     this.center = [0, 0];
+    this.mid = [width, 0];
 
     for(var i = 0; i < this.rows; i++){
         for(var j = 0; j < this.columns; j++){
-            //create a new hexagon with center center
-            this.hexagons[j][i] = new Hexagon(this.center, this.r);
-            //add the width of the hexagon to the x-coordinate of the center
-            this.center[0] += (this.r * sqrt(3));
+            if(j < barWidth){
+                //create a new hexagon with center center
+                this.hexagons[j][i] = new Hexagon(this.center, this.r);
+                //add the width of the hexagon to the x-coordinate of the center
+                this.center[0] += (this.r * sqrt(3));
+            }else if(j >= this.columns - barWidth){
+                this.hexagons[j][i] = new Hexagon(this.mid, this.r);
+
+                this.mid[0] -= (this.r * sqrt(3));
+            }
         }
         //add the height spacing to the y-coordinate of the center
         this.center[1] += (this.r * 3) / 2;
+        this.mid[1] += (this.r * 3) / 2;
 
         //if the row number is divisible by two, bump the first center in the row
         if(i % 2 == 0){
             this.center[0] = (sqrt(3) / 2) * this.r;
+            this.mid[0] = width - ((sqrt(3) / 2) * this.r);
         }else{
             this.center[0] = 0;
+            this.mid[0] = width;
         }
     }
 
     this.display = function(){
         for(var i = 0; i < this.rows; i++){
             for(var j = 0; j < this.columns; j++){
-                this.hexagons[j][i].display();
+                if(j < barWidth || j >= this.columns - barWidth){
+                    this.hexagons[j][i].display();
+                }
             }
         }
     }
@@ -169,6 +179,16 @@ function Grid(numColumns, numRows, radius){
         this.row = int(row);
         return this.hexagons[this.column][this.row];
     }
+    this.randomHexagon = function(){
+        this.selector = getRandom(0, 2);
+        this.row = getRandom(0, this.rows);
+
+        if(this.selector == 0){
+            return this.getHexagon(getRandom(0, barWidth), this.row);
+        }else{
+            return this.getHexagon(getRandom(this.columns - barWidth, this.columns), this.row);
+        }
+    }
 }
 
 function windowResized(){
@@ -177,7 +197,7 @@ function windowResized(){
     canvasHeight = document.body.clientHeight;
     //canvasHeight = window.innerHeight;
 
-    radius = int(windowWidth / 100);
+    radius = int(height / 67);
     diameter = radius * 2;
 
     resizeCanvas(windowWidth, canvasHeight);
@@ -185,7 +205,11 @@ function windowResized(){
     numColumns = int(width / (sqrt(3) * radius)) + 2;
     numRows = int(height / (.75 * diameter)) + 2;
 
+    barWidth = int((0.2 * windowWidth) / diameter) + 1;
+
     grid = new Grid(numColumns, numRows, radius);
 
     initials();
+
+    grid.display();
 }
