@@ -8,6 +8,7 @@ var diameter;
 
 var windowWidth;
 var canvasHeight;
+var body;
 
 var palletLength = 6;
 var pallet = ["#2E2E2E", "#ADE8AD", "#5F7F5F", "#BEFFBE", "#304030", "#ABE5AB"];
@@ -21,6 +22,7 @@ function getRandom(min, max){
 
 //called once on window load
 function setup(){
+    //body = document.getElementById("body").clientHeight;
     windowWidth = window.innerWidth;
     //canvasHeight = document.body.clientHeight;
     canvasHeight = window.innerHeight;
@@ -172,8 +174,8 @@ function Grid(numColumns, numRows, radius){
 
 function windowResized(){
     windowWidth = window.innerWidth;
-    //canvasHeight = document.body.clientHeight;
-    canvasHeight = window.innerHeight;
+    canvasHeight = document.body.clientHeight;
+    //canvasHeight = window.innerHeight;
 
     radius = int(windowWidth / 100);
     diameter = radius * 2;
