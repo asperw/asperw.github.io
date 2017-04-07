@@ -26,21 +26,18 @@ function getRandom(min, max){
 //called once on window load
 function setup(){
     windowWidth = window.innerWidth;
-
     canvasHeight = document.body.clientHeight;
-    //canvasHeight = window.innerHeight;
 
     var canvas = createCanvas(windowWidth, canvasHeight); //size(1440, 900);
 
     canvas.parent("sketch-holder");
-
     canvas.id("background-canvas");
 
     smooth();
     //noStroke();
     stroke("#333333");
 
-    radius = int(height / 67); //so there will be 50 along the height
+    radius = int(height / 67); //so there will be 50ish along the height
     diameter = radius * 2;
 
     //setting length and width of 2-d array of hexagons
@@ -87,7 +84,7 @@ function initials(){
 }
 
 function Hexagon(center, radius){
-    this.c = "#2E2E2E";
+    this.c = "#2E2E2E"; //set initial color - we shouldn't see this
 
     this.r = radius;
     this.x = center[0];
@@ -216,9 +213,7 @@ function Grid(numColumns, numRows, radius){
 
 function windowResized(){
     windowWidth = window.innerWidth;
-
     canvasHeight = document.body.clientHeight;
-    //canvasHeight = window.innerHeight;
 
     radius = int(height / 67);
     diameter = radius * 2;
