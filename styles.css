@@ -30,7 +30,7 @@ html{
 }
 
 #sketch-holder{
-    height: 10px;
+    height: 100%;
     margin: 0;
     padding: 0;
 
@@ -38,7 +38,9 @@ html{
     left: 0;
     top: 0;
 
-    width: 10px;
+    /*overflow: hidden;*/
+
+    width: 100%;
     z-index: -1;
 }
 
