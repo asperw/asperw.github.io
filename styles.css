@@ -1,6 +1,6 @@
 /*made p5.js default canvas size 0, 0 on lines 8970, 8971*/
 html{
-    background: #777777;
+    background: yellow;
     height: 100%;
     margin: 0;
     overflow-x: hidden;
@@ -61,12 +61,21 @@ body{
 header{
     align-items: center;
     display: flex;
-    width: 100%;;
+    width: 100%;
 }
 header > div{
     display: flex;
     flex: 1;
-    justify-content: space-evenly;
+
+    justify-content: space-around;
+}
+@-moz-document url-prefix(){
+    header > div{
+        display: flex;
+        flex: 1;
+
+        justify-content: space-evenly;
+    }
 }
 /*title*/
 header > h1{
