@@ -1,6 +1,6 @@
 /*made p5.js default canvas size 0, 0 on lines 8970, 8971*/
 html{
-    background: yellow;
+    background: #333;
     height: 100%;
     margin: 0;
     overflow-x: hidden;
