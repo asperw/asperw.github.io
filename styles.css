@@ -1,6 +1,6 @@
 /*made p5.js default canvas size 0, 0 on lines 8970, 8971*/
 html{
-    background: #333;
+    background: #53688A;
     height: 100%;
     margin: 0;
     overflow-x: hidden;
@@ -174,20 +174,25 @@ div.info{
     font-size: 3em;
 }
 
-#courses{
-    display: block;
-    float: left;
+hr, h4{
+    margin: 1em 0 1em 0;
+}
+
+.coursework{
+    display: flex;
+    justify-content: space-between;
+}
+.courses{
     line-height: 1.5;
     margin: 0;
     text-align: justify;
 }
-#languages{
-    display: block;
-    float: right;
+.languages{
     line-height: 1.5;
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: right;
 }
 
 #survey a{
