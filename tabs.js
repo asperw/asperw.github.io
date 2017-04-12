@@ -11,7 +11,7 @@ window.onload = function(){
     tabPanes = document.getElementById("containers").getElementsByTagName("div");
 
     //activate first pane from 0 and from right
-    displayPane(tabLinks[4]);
+    displayPane(tabLinks[0]);
 
     for(var i = 0; i < tabLinks.length; i++){
         tabLinks[i].onclick = function(){
