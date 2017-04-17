@@ -10,12 +10,10 @@ var radius;
 var diameter;
 
 var windowWidth;
-var canvasHeight;
+var windowHeight;
 
 var palletLength = 5;
 var pallet = ["#2D384A", "#81A2D6", "#53688A", "#5B7297", "#445570"]
-//var pallet = ["#2E2E2E", "#ADE8AD", "#5F7F5F", "#BEFFBE", "#304030", "#ABE5AB"];
-//var pallet = ["#2E2E2E", "#7F7F7F", "#FFFFFF", "#404040", "#BFBFBF", "#ADE8AD", "#E0FFE4"];
 
 function getRandom(min, max){
     min = Math.ceil(min);
@@ -26,9 +24,9 @@ function getRandom(min, max){
 //called once on window load
 function setup(){
     windowWidth = window.innerWidth;
-    canvasHeight = document.body.clientHeight;
+    windowHeight = document.body.clientHeight;
 
-    var canvas = createCanvas(windowWidth, canvasHeight); //size(1440, 900);
+    var canvas = createCanvas(windowWidth, windowHeight); //size(1440, 900);
 
     canvas.parent("sketch-holder");
     canvas.id("background-canvas");
@@ -123,6 +121,8 @@ function Hexagon(center, radius){
         this.c = setColor;
     }
 
+    //TODO:lerp the color smoothly
+    //this doesn't work
     /*
     this.lerpTheColor = function(selection){
         this.selection = selection;
@@ -213,12 +213,12 @@ function Grid(numColumns, numRows, radius){
 
 function windowResized(){
     windowWidth = window.innerWidth;
-    canvasHeight = document.body.clientHeight;
+    windowHeight = document.body.clientHeight;
 
     radius = int(height / 67);
     diameter = radius * 2;
 
-    resizeCanvas(windowWidth, canvasHeight);
+    resizeCanvas(windowWidth, windowHeight);
 
     numColumns = int(width / (sqrt(3) * radius)) + 2;
     numRows = int(height / (.75 * diameter)) + 2;
