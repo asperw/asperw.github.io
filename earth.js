@@ -69,6 +69,8 @@ function draw(){
     /*
     //orbit test geometry
     push();
+    //rotateX(-0.01 * frameCount);
+    //rotateY(-0.01 * frameCount);
     //rotateZ(-0.01 * frameCount);
     ambientMaterial(250);
     torus(60 * earthRadius, 1);
