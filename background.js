@@ -26,7 +26,7 @@ function setup(){
     windowWidth = window.innerWidth;
     windowHeight = document.body.clientHeight;
 
-    var canvas = createCanvas(windowWidth, windowHeight); //size(1440, 900);
+    var canvas = createCanvas(windowWidth, windowHeight);
 
     canvas.parent("sketch-holder");
     canvas.id("background-canvas");
