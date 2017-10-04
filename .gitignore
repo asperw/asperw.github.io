@@ -2,7 +2,7 @@
 
 p5/addons/*
 p5/empty-example/*
-p5/p5.min.js
+p5/p5.js
 
 
 .DS_Store
