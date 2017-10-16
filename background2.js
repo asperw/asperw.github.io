@@ -24,17 +24,15 @@ function draw(){
 
     if(random(1) < 0.5){
       line(x, y, x + spacing, y + spacing);
-      //line(width - x, height - y, width - x - spacing, height - y - spacing);
     }else{
       line(x, y + spacing, x + spacing, y);
-      //line(width - x, height - y - spacing, width - x - spacing, height - y);
     }
 
-    y += spacing;
+    x += spacing;
 
-    if(y > height){
-      y = 0;
-      x += spacing;
+    if(x > width){
+      x = 0;
+      y += spacing;
     }
 }
 
