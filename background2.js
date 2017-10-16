@@ -2,7 +2,7 @@
 
 let x = 0;
 let y = 0;
-let spacing = 10;
+let spacing = 40;
 
 //called once on window load
 function setup(){
@@ -38,4 +38,6 @@ function draw(){
 function windowResized(){
     windowWidth = window.innerWidth;
     windowHeight = document.body.clientHeight;
+
+    resizeCanvas(windowWidth, windowHeight);
 }
