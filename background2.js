@@ -24,7 +24,7 @@ function draw(){
     if(random(1) < 0.5){
       line(x, y, x + 10, y + 10);
     }else{
-      line(x, x + 10, x + 10, y);
+      line(x, y + 10, x + 10, y);
     }
 
     x += spacing;
