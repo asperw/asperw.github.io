@@ -3,6 +3,7 @@
 let x = 0;
 let y = 0;
 let spacing = 20;
+let do = 1;
 
 //called once on window load
 function setup(){
@@ -18,31 +19,39 @@ function setup(){
 }
 
 function draw(){
-    //grid.display();
 
-    stroke(255);
-
-    if(random(1) < 0.5){
-      line(x, y, x + spacing, y + spacing);
-    }else{
-      line(x, y + spacing, x + spacing, y);
-    }
-
-    x += spacing;
-
-    if(x > width){
-      x = 0;
-      y += spacing;
-    }
-}
-
-function windowResized(){
+  if(do){
     windowWidth = window.innerWidth;
     windowHeight = document.body.clientHeight;
 
     resizeCanvas(windowWidth, windowHeight);
 
-    x = y = 0;
+    do = 0;
+  }
+
+  stroke(255);
+
+  if(random(1) < 0.5){
+    line(x, y, x + spacing, y + spacing);
+  }else{
+    line(x, y + spacing, x + spacing, y);
+  }
+
+  x += spacing;
+
+  if(x > width){
+    x = 0;
+    y += spacing;
+  }
+}
+
+function windowResized(){
+  windowWidth = window.innerWidth;
+  windowHeight = document.body.clientHeight;
+
+  resizeCanvas(windowWidth, windowHeight);
+
+  x = y = 0;
 }
 
 function mousePressed(){
@@ -50,7 +59,7 @@ function mousePressed(){
   windowHeight = document.body.clientHeight;
 
   resizeCanvas(windowWidth, windowHeight)
-  
+
   clear();
 
   x = y = 0;
