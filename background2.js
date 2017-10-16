@@ -46,6 +46,11 @@ function windowResized(){
 }
 
 function mousePressed(){
+  windowWidth = window.innerWidth;
+  windowHeight = document.body.clientHeight;
+
+  resizeCanvas(windowWidth, windowHeight)
+  
   clear();
 
   x = y = 0;
