@@ -22,14 +22,14 @@ function draw(){
 
     stroke(255);
     if(random(1) < 0.5){
-      line(x, y, x + 10, y + 10);
+      line(x, y, x + spacing, y + spacing);
     }else{
-      line(x, y + 10, x + 10, y);
+      line(x, y + spacing, x + spacing, y);
     }
 
     x += spacing;
 
-    if( x > width){
+    if(x > width){
       x = 0;
       y += spacing;
     }
