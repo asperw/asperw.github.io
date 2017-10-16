@@ -3,7 +3,7 @@
 let x = 0;
 let y = 0;
 let spacing = 20;
-let do = 1;
+let doThis = 1;
 
 //called once on window load
 function setup(){
@@ -20,13 +20,13 @@ function setup(){
 
 function draw(){
 
-  if(do){
+  if(doThis){
     windowWidth = window.innerWidth;
     windowHeight = document.body.clientHeight;
 
     resizeCanvas(windowWidth, windowHeight);
 
-    do = 0;
+    doThis = 0;
   }
 
   stroke(255);
