@@ -7,14 +7,15 @@ let spacing = 20;
 //called once on window load
 function setup(){
     windowWidth = window.innerWidth;
-    windowHeight = document.body.clientHeight;
+    //windowHeight = document.body.clientHeight;
+    windowHeight = window.innerHeight;
 
     var canvas = createCanvas(windowWidth, windowHeight);
 
     canvas.parent("sketch-holder");
     canvas.id("background-canvas");
 
-    //console.log("http:asperw.me");
+    //console.log("http:asperw.io");
 }
 
 function draw(){
