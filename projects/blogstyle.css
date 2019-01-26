@@ -1,10 +1,19 @@
 /*made p5.js default canvas size 0, 0 on lines 8970, 8971*/
 html {
   font-family: Muli;
-  background: #53688A;
+  background: #53688a;
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+
+h1 {
+
+}
+
+body{
+  min-width: 1024px;
+  width: 70%;
 }
