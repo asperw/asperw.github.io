@@ -9,8 +9,14 @@ html {
   overflow-x: hidden;
 }
 
-h1 {
+@font-face {
+  font-family: "Muli";
+  src: url("fonts/Muli/Muli-Regular.ttf");
+}
 
+h1 {
+  margin: 0;
+  padding: 32px 50px;
 }
 
 body{
