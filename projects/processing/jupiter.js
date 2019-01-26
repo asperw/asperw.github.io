@@ -1,5 +1,5 @@
-//create WEBGL Earth and moon
-//coordinate system
+// create WEBGL Earth and moon
+// coordinate system
 //  | z    / y
 //  |    /
 //  |  /
@@ -52,7 +52,7 @@ function setup(){
 
   earthRadius = 4;
 
-  //Jupiter is 11.209 times the diameter of Earth at the equator
+  // Jupiter is 11.209 times the diameter of Earth at the equator
   jupiterRadius = 11.209 * earthRadius;
 
   pointLight(255, 255, 255, 0, 0, 0);
@@ -63,7 +63,7 @@ function setup(){
 
 function draw(){
 
-  //coordinate system
+  // coordinate system
   //  | z    / y
   //  |    /
   //  |  /
@@ -71,56 +71,56 @@ function draw(){
 
   background(0);
 
-  //camera positioning
+  // camera positioning
   rotateX(-PI / 3);
   translate(0, (1500 / (-windowWidth / 1000)));
 
-  //Earth
+  // Earth
   push();
   translate(50, 150);
-  //stand it up
+  // stand it up
   rotateX(PI / 3 + earthTilt);
   rotateY(0.02 * frameCount);
   texture(earthTexture);
   sphere(earthRadius);
   pop();
 
-  //Jupiter
+  // Jupiter
   push();
-  //stand it up
+  // stand it up
   rotateX(PI / 2 + jupiterTilt);
   rotateY(0.01 * frameCount);
   texture(jupiterTexture);
   sphere(jupiterRadius);
   pop();
 
-  //Io
+  // Io
   push();
-  //moving around Jupiter in a circle
+  // moving around Jupiter in a circle
   translate((5.90 * jupiterRadius) * cos(0.02 * frameCount), (5.90 * jupiterRadius) * sin(0.02 * frameCount));
   texture(ioTexture);
   sphere(0.286 * earthRadius * 2, 12, 8);
   pop();
 
-  //Europa
+  // Europa
   push();
-  //moving around Jupiter in a circle
+  // moving around Jupiter in a circle
   translate((9.39 * jupiterRadius) * cos(0.01 * frameCount), (9.39 * jupiterRadius) * sin(0.01 * frameCount));
   texture(europaTexture);
   sphere(0.245 * earthRadius * 2, 12, 8);
   pop();
 
-  //Ganymede
+  // Ganymede
   push();
-  //moving around Jupiter in a circle
+  // moving around Jupiter in a circle
   translate((14.97 * jupiterRadius) * -sin(0.005 * frameCount), (14.97 * jupiterRadius) * cos(0.005 * frameCount));
   texture(ganymedeTexture);
   sphere(0.413 * earthRadius * 2, 12, 8);
   pop();
 
-  //Callisto
+  // Callisto
   push();
-  //moving around Jupiter in a circle
+  // moving around Jupiter in a circle
   translate((26.33 * jupiterRadius) * sin(0.001 * frameCount), (26.33 * jupiterRadius) * -cos(0.001 * frameCount));
   texture(callistoTexture);
   sphere(0.378 * earthRadius * 2, 12, 8);
