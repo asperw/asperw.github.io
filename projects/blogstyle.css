@@ -11,7 +11,7 @@ html {
 
 @font-face {
   font-family: "Muli";
-  src: url("fonts/Muli/Muli-Regular.ttf");
+  src: url("../fonts/Muli/Muli-Regular.ttf");
 }
 
 h1 {
