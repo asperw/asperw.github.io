@@ -1,4 +1,4 @@
-// create WEBGL Earth and moon
+// create WEBGL Jupiter and moons
 // coordinate system
 //  | z    / y
 //  |    /
