@@ -14,16 +14,69 @@ html {
   src: url("../fonts/Muli/Muli-Regular.ttf");
 }
 
+hr{
+  color: #53688a;
+  margin: 32px 0;
+}
+
 h1 {
   color: #53688a;
   margin: 0;
   padding: 32px 50px;
 }
 
+h2 {
+  color: #53688a;
+  margin: 0;
+  padding: 0 50px;
+}
+
+h3 {
+  color: #53688a;
+  margin: 0;
+  padding: 0 50px;
+}
+
+ol {
+  line-height: 24px;
+  padding: 0 50px;
+}
+
+p {
+  line-height: 24px;
+  margin: 0;
+  padding: 32px 50px;
+}
+
+.two {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.text {
+  padding: 0 0 0 50px;
+  float: left;
+  max-width: 40%;
+}
+
+.text p{
+  padding: 16px 50px;
+}
+
+.block p{
+  padding: 16px 50px;
+}
+
+.image{
+  padding: 0 50px 0 0;
+  float: right;
+}
+
 body{
   background: white;
   min-width: 1024px;
   margin: 0 auto;
-  height: 100%;
+  height: auto;
   width: 70%;
 }
