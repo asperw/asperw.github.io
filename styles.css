@@ -131,7 +131,7 @@ div.info {
   color: rgb(83, 104, 138);
   font-size: 2em;
   margin: 0 0 1em 0;
-  /*height: inherit;*/
+  height: auto;
 }
 #tabs {
   height: 2em;
