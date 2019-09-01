@@ -1,0 +1,120 @@
+html {
+    font-family: Muli;
+    background: #53688A;
+}
+
+@font-face {
+    font-family: "Muli";
+    src: url("fonts/Muli/Muli-Regular.ttf");
+}
+
+body {
+    min-width: 1024px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+header {
+    align-items: center;
+    display: flex;
+}
+header > div {
+    display: flex;
+    flex: 1;
+
+    /* justify-content: space-evenly; */
+}
+header > div > a {
+    margin-left: 4em;
+}
+
+/*title*/
+header > h1 {
+    color: #f9f9fa;
+    font-family: Muli;
+    font-size: 4em;
+}
+
+p {
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+
+/* //////////////////////////// */
+
+div.info {
+    border-radius: 1em;
+}
+
+#tabs {
+    height: 2em;
+    overflow: hidden;
+}
+
+#tabs > ul {
+    font-family: Muli;
+    font-size: 1em;
+    list-style: none;
+}
+
+#tabs > ul > li {
+    background: #CCCCCC;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: block;
+    float: left;
+    margin-left: .5em;
+    padding: .5em 1em;
+}
+#homeTab {
+    margin-left: 0 !important;
+}
+#tabs ul, #tabs li, #links ul, #links li {
+    margin: 0;
+    padding: 0;
+}
+#tabs a {
+    color: black;
+    text-decoration: none;
+}
+
+#tabs > ul > li:hover {
+    background: #f9f9fa;
+    cursor: pointer;
+}
+#tabs > ul > .active {
+    background: #f9f9fa;
+    cursor: pointer;
+}
+
+#containers div {
+    background: #f9f9fa;
+    color: #333333;
+    /*height of the website*/
+    min-height: 60em;
+
+    padding: 2em 4em 0 4em;
+}
+#tabPane3 {
+    padding: 2em 4em 2em 4em !important;
+}
+
+.coursework {
+    display: flex;
+    justify-content: space-between;
+}
+.courses {
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+}
+.languages {
+    line-height: 1.5;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}

@@ -1,16 +1,16 @@
-// Tabbed panes script
+// tabbed panes script
 
 var tabLinks;
 var tabPanes;
 
-// Function starts on window load
+// function starts on window load
 window.onload = function(){
-    // Set initial pane state
-    // Listen for clicks on tabs
+    // set initial pane state
+    // listen for clicks on tabs
     tabLinks = document.getElementById("navigation").getElementsByTagName("li");
     tabPanes = document.getElementById("pages").getElementsByTagName("div");
 
-    // Activate first pane from 0 and from right
+    // activate first pane from 0 and from right
     displayPane(tabLinks[0]);
 
     for(var i = 0; i < tabLinks.length; i++){
@@ -18,7 +18,7 @@ window.onload = function(){
             displayPane(this);
             return false;
         }
-        // On focus means on tab to
+        // on focus means on tab to
         tabLinks[i].onfocus = function(){
             displayPane(this);
             return false;
@@ -26,20 +26,20 @@ window.onload = function(){
     }
 }
 
-// Display switching
+// display switching
 function displayPane(tabToActivate){
-    // Respond to tab clicks
-    // Change pane display and activate tabs
+    // respond to tab clicks
+    // change pane display and activate tabs
     for(var i = 0; i < tabLinks.length; i++){
         if(tabLinks[i] == tabToActivate){
-            // If activated, change class
+            // if activated, change class
             tabLinks[i].classList.add("active");
-            // Display the pane
+            // display the pane
             tabPanes[i].style.display = "block";
         }else{
-            // Remove active class
+            // remove active class
             tabLinks[i].classList.remove("active");
-            // Hide the pane
+            // hide the pane
             tabPanes[i].style.display = "none";
         }
     }
