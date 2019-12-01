@@ -54,11 +54,29 @@
     </div>
 
     <h3>Step 3:</h3>
-    <div class="block">
-        <p>Next, we need to create a file that will let us use SSH on the Raspberry Pi. To improve security of connected devices, your Raspberry Pi operating 
+    <div class = "block">
+        <p>Next, we need to create two files that will let us connect to WiFi and use SSH on the Raspberry Pi. To improve security of connected devices, your Raspberry Pi operating 
             system will most likely have SSH disabled by default.
         </p>
         <p>You may need to eject your card and re-insert it into your PC to find the <b>/boot</b> directory.</p>
+        <p>Start by making a notepad file with the lines:</p>
+        <div class="two">
+            <div class = "text">
+                <pre>
+                    <code>
+                        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+                        update_config=1
+                        country=US
+                        
+                        network={
+                          ssid="&ltName of your WiFi&gt"
+                          psk="&ltPassword for your WiFi&gt"
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+        <p>Save this file as <b>"wpa_supplicant.conf"</b> in the /boot directory.</p>
         <p>Rasbian needs an empty, extensionless file named <b>" ssh. "</b> in the /boot directory of the SD card to enable SSH. To do this on Windows, open Notepad and save a blank file with 
             the name <b>" ssh. "</b> and choose <b>All Files</b> for the Save as type. Move this file to the /boot directory. <b>note: the " . " at the end of ssh is important when 
             saving the SSH file otherwise Windows will make this a text file, even if we choose All Files for the Save as type.</b>
