@@ -18,18 +18,21 @@ header {
     align-items: center;
     display: flex;
 }
-header > div {
+
+header>div {
     display: flex;
     flex: 1;
-
     /* justify-content: space-evenly; */
 }
-header > div > a {
+
+header>div>a {
     margin-left: 4em;
 }
 
+
 /*title*/
-header > h1 {
+
+header>h1 {
     color: #f9f9fa;
     font-family: Muli;
     font-size: 4em;
@@ -54,13 +57,13 @@ div.info {
     overflow: hidden;
 }
 
-#tabs > ul {
+#tabs>ul {
     font-family: Muli;
     font-size: 1em;
     list-style: none;
 }
 
-#tabs > ul > li {
+#tabs>ul>li {
     background: #CCCCCC;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -69,23 +72,30 @@ div.info {
     margin-left: .5em;
     padding: .5em 1em;
 }
+
 #homeTab {
     margin-left: 0 !important;
 }
-#tabs ul, #tabs li, #links ul, #links li {
+
+#tabs ul,
+#tabs li,
+#links ul,
+#links li {
     margin: 0;
     padding: 0;
 }
+
 #tabs a {
     color: black;
     text-decoration: none;
 }
 
-#tabs > ul > li:hover {
+#tabs>ul>li:hover {
     background: #f9f9fa;
     cursor: pointer;
 }
-#tabs > ul > .active {
+
+#tabs>ul>.active {
     background: #f9f9fa;
     cursor: pointer;
 }
@@ -95,9 +105,9 @@ div.info {
     color: #333333;
     /*height of the website*/
     min-height: 60em;
-
     padding: 2em 4em 0 4em;
 }
+
 #tabPane3 {
     padding: 2em 4em !important;
 }
@@ -105,17 +115,19 @@ div.info {
 .coursework {
     display: flex;
     justify-content: space-between;
-
     margin: 1em 0;
 }
+
 .courses {
     line-height: 1.5;
     margin: 0;
     text-align: justify;
 }
+
 .extras {
-  list-style: none;
+    list-style: none;
 }
+
 .languages {
     line-height: 1.5;
     list-style: none;
@@ -124,26 +136,25 @@ div.info {
     text-align: right;
 }
 
+
 /*////////////Projects page////////////*/
 
-.projects > span {
-  display: flex;
-  padding: 2em 0;
-  height: 250px;
+.projects>span {
+    display: flex;
+    padding: 2em 0;
+    height: 250px;
 }
 
-.projects > span > p {
-  position: relative;
-  left: -50px;
-
-  margin: 1em;
+.projects>span>p {
+    position: relative;
+    left: -50px;
+    margin: 1em;
 }
 
 #icon {
-  position: relative;
-  left: -275px;
-  top: -25px;
-
-  border-radius: 50%;
-  height: 50px;
+    position: relative;
+    left: -275px;
+    top: -25px;
+    border-radius: 50%;
+    height: 50px;
 }

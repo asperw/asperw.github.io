@@ -10,12 +10,13 @@
 </head>
 
 <body>
-    <center><h1>Setting up a Headless Raspberry Pi</h1></center>
+    <center>
+        <h1>Setting up a Headless Raspberry Pi</h1>
+    </center>
 
     <h2>Goal:</h2>
-    <p>Our goal is to set up a Raspberry Pi to be headless, or without a monitor, that we can connect to through SSH. This will be very useful for setting up 
-        Raspberry Pi Zero W boards because these use mini HDMI for display out, and you need a USB-OTG adapter to connect a mouse and keyboard. 
-        You can set up any Raspberry Pi board in this way.
+    <p>Our goal is to set up a Raspberry Pi to be headless, or without a monitor, that we can connect to through SSH. This will be very useful for setting up Raspberry Pi Zero W boards because these use mini HDMI for display out, and you need a USB-OTG adapter
+        to connect a mouse and keyboard. You can set up any Raspberry Pi board in this way.
     </p>
 
     <h2>Materials:</h2>
@@ -34,19 +35,16 @@
     <hr>
 
     <h3>Step 1:</h3>
-    <p>The first step is to download the operating system the Raspberry Pi will use, I chose to use Raspbian, the official Raspberry Pi operating 
-        system. You could use another operating system, but the steps to set up SSH may be slightly different. <a href="https://www.raspberrypi.org/downloads/raspbian/">Get Raspbian.</a> 
-        Since we are setting up our Pi to work headless, we can choose the "lite" version of whatever operating system because 
-        we do not need the desktop features. This saves space on our SD card, too.
+    <p>The first step is to download the operating system the Raspberry Pi will use, I chose to use Raspbian, the official Raspberry Pi operating system. You could use another operating system, but the steps to set up SSH may be slightly different. <a href="https://www.raspberrypi.org/downloads/raspbian/">Get Raspbian.</a>        Since we are setting up our Pi to work headless, we can choose the "lite" version of whatever operating system because we do not need the desktop features. This saves space on our SD card, too.
     </p>
 
     <h3>Step 2:</h3>
     <p>Next, use Win32 Disk Imager to write the operating system to the SD card.</p>
-    <div class = "two">
-        <div class = "image">
+    <div class="two">
+        <div class="image">
             <img src="images/win32disk.JPG" alt="Windows thirty two disk imager.">
         </div>
-        <div class = "text">
+        <div class="text">
             <p>Select the downloaded operating system image with the blue folder icon.</p>
             <p><b>Make sure the correct drive is selected!</b></p>
             <p>Click "Write" to write the operating system to the SD card. This will take a while.</p>
@@ -54,14 +52,13 @@
     </div>
 
     <h3>Step 3:</h3>
-    <div class = "block">
-        <p>Next, we need to create two files that will let us connect to WiFi and use SSH on the Raspberry Pi. To improve security of connected devices, your Raspberry Pi operating 
-            system will most likely have SSH disabled by default.
+    <div class="block">
+        <p>Next, we need to create two files that will let us connect to WiFi and use SSH on the Raspberry Pi. To improve security of connected devices, your Raspberry Pi operating system will most likely have SSH disabled by default.
         </p>
         <p>You may need to eject your card and re-insert it into your PC to find the <b>/boot</b> directory.</p>
         <p>Start by making a notepad file with the lines:</p>
         <div class="two">
-            <div class = "text">
+            <div class="text">
                 <pre>
                     <code>
                         ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -77,24 +74,23 @@
             </div>
         </div>
         <p>Save this file as <b>"wpa_supplicant.conf"</b> in the /boot directory.</p>
-        <p>Rasbian needs an empty, extensionless file named <b>" ssh. "</b> in the /boot directory of the SD card to enable SSH. To do this on Windows, open Notepad and save a blank file with 
-            the name <b>" ssh. "</b> and choose <b>All Files</b> for the Save as type. Move this file to the /boot directory. <b>note: the " . " at the end of ssh is important when 
-            saving the SSH file otherwise Windows will make this a text file, even if we choose All Files for the Save as type.</b>
+        <p>Rasbian needs an empty, extensionless file named <b>" ssh. "</b> in the /boot directory of the SD card to enable SSH. To do this on Windows, open Notepad and save a blank file with the name <b>" ssh. "</b> and choose <b>All Files</b> for the Save
+            as type. Move this file to the /boot directory. <b>note: the " . " at the end of ssh is important when
+                saving the SSH file otherwise Windows will make this a text file, even if we choose All Files for the
+                Save as type.</b>
         </p>
         <p>Congratulations, you are now ready to plug in your Raspberry Pi!</p>
     </div>
 
     <h3>Step 4:</h3>
-    <p>Now we will plug in the Raspberry Pi to a power supply. While the Raspberry Pi boots for the first time, we need to find the IP 
-        address of the Pi. There are many ways to do this, I logged into my home router to look at the connected devices because this was 
-        easiest for me to do.
+    <p>Now we will plug in the Raspberry Pi to a power supply. While the Raspberry Pi boots for the first time, we need to find the IP address of the Pi. There are many ways to do this, I logged into my home router to look at the connected devices because
+        this was easiest for me to do.
     </p>
     <div class="two">
         <div class="text">
             <p>This is what I see when I look into connected devices on my home router.</p>
             <p>What we are looking for is the IP Address so we know what to SSH to later.</p>
-            <p>Here, my Raspberry Pi's address is 192.168.1.116. Your Pi's address will be similar to this, because devices on your local network are going 
-                to probably start with 192.168.1
+            <p>Here, my Raspberry Pi's address is 192.168.1.116. Your Pi's address will be similar to this, because devices on your local network are going to probably start with 192.168.1
             </p>
         </div>
         <div class="image">
@@ -126,8 +122,7 @@
     </div>
 
     <h3>Step 6:</h3>
-    <p>The next step is to change the default password for the Raspberry Pi. This is important to do because anyone on your network could log in to the 
-        Raspberry Pi.
+    <p>The next step is to change the default password for the Raspberry Pi. This is important to do because anyone on your network could log in to the Raspberry Pi.
     </p>
     <div class="two">
         <div class="text">
@@ -139,8 +134,7 @@
     </div>
 
     <h3>Step 7:</h3>
-    <p>The last step for our SSH setup is to make sure the Raspberry Pi has a static IP address so we always know where to connect to in the future, and
-        we can save a SSH connection.
+    <p>The last step for our SSH setup is to make sure the Raspberry Pi has a static IP address so we always know where to connect to in the future, and we can save a SSH connection.
     </p>
     <div class="two">
         <div class="text">
