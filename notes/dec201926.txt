@@ -1,0 +1,869 @@
+    1  ls
+    2  password
+    3  passwd
+    4  sudo reboot
+    5  ls
+    6  sudo apt-get update
+    7  sudo apt-get upgrade
+    8  ls
+    9  history
+   10  password
+   11  sudo apt-get remove apache2
+   12  curl https://getcaddy.com | bash -s personal
+   13  sudo mkdir /etc/caddy
+   14  sudo mkdir -p /var/www/asperw.io
+   15  sudo nano /etc/caddy/Caddyfile
+   16  ls
+   17  cd /etc/caddy/
+   18  ls
+   19  cat Caddyfile 
+   20  cd
+   21  sudo nano /var/www/localhost/index.html
+   22  cd /var/www
+   23  ls
+   24  cd
+   25  ls
+   26  sudo nano /var/www/asperw.io/index.html
+   27  cd /etc/caddy
+   28  caddy
+   29  history
+   30  sudo mkdir -p /var/www/localhost
+   31  sudo nano /etc/caddy/Caddyfile
+   32  sudo nano /var/www/localhost/index.html
+   33  cd /var/www
+   34  ls
+   35  cd asperw.io/
+   36  ls
+   37  rm index.html 
+   38  sudo rm index.html 
+   39  ls
+   40  cd ..
+   41  ls
+   42  rm asperw.io/
+   43  rmdir asperw.io/
+   44  sudo rmdir asperw.io/
+   45  ls
+   46  cd 
+   47  ls
+   48  history
+   49  ls
+   50  cd /etc/caddy
+   51  caddy
+   52  ls
+   53  cat Caddyfile 
+   54  history
+   55  sudo nano /etc/caddy/Caddyfile
+   56  ls
+   57  cd
+   58  ls
+   59  cd /etc
+   60  ls
+   61  cd caddy/
+   62  ls
+   63  cd
+   64  history
+   65  cd /var/www
+   66  ls
+   67  cd localhost/
+   68  ls
+   69  cat index.html 
+   70  vim index.html 
+   71  vi index.html 
+   72  ls
+   73  cat index.html 
+   74  cd
+   75  cd /etc/caddy
+   76  ls
+   77  caddy
+   78  ls
+   79  cd
+   80  ls
+   81  mkdir terminal_history
+   82  ls
+   83  cd terminal_history/
+   84  history >> nov201930.txt
+   85  cd /etc/caddy
+   86  caddy
+   87  netstat -atu
+   88  netstat -atu ; caddy
+   89  caddy ; netstat -atu
+   90  dig +short myip.opendns.com @resolver1.opendns.com
+   91  cd
+   92  ls
+   93  dig
+   94  host
+   95  host myip.opendns.com resolver1.opendns.com | grep "myip.opendns.com has" | awk '{print $4}'
+   96  wget -qO- http://ipecho.net/plain | xargs echo
+   97  cd /etc
+   98  ls
+   99  cd caddy/
+  100  caddy
+  101  ls
+  102  cd
+  103  ls
+  104  cd terminal_history/
+  105  ls
+  106  history >> nov201930.txt
+  107  cat nov
+  108  cat nov201930.txt 
+  109  wget -qO- http://ipecho.net/plain | xargs echo
+  110  ls
+  111  cat nov201930.txt 
+  112  exit
+  113  ls
+  114  cd /etc/caddy
+  115  caddy
+  116  ls
+  117  sudo apt-get install php7.4-fpm
+  118  sudo apt-get update
+  119  sudo apt-get php7.3-fpm
+  120  sudo apt-get install php7.3-fpm
+  121  sudo apt-get install php7.3-mbstring
+  122  sudo apt-get install php7.3-mysql
+  123  sudo apt-get install php7.3-curl
+  124  sudo apt-get install php7.3-gd
+  125  sudo apt-get install php7.3-zip
+  126  sudo apt-get install php7.3-xml
+  127  sudo apt-get install php7.3-curl
+  128  ls
+  129  sudo nano /etc/caddy/Caddyfile
+  130  ls
+  131  sudo nano /etc/caddy/Caddyfile
+  132  cd
+  133  sudo chown -R root:www-data /etc/caddy
+  134  sudo chown www-data:www-data /etc/caddy/Caddyfile
+  135  sudo chmod 444 /etc/caddy/Caddyfile
+  136  sudo chown -R www-data:www-data /var/www
+  137  sudo chmod -R 555 /var/www
+  138  sudo wget https://raw.githubusercontent.com/mholt/caddy/master/dist/init/linux-system/caddy.service
+  139  sudo wget https://raw.githubusercontent.com/mholt/caddy/master/dist/init/linux-systemd/caddy.service
+  140  sudo cp caddy.service /etc/systemd/system/
+  141  sudo chown root:root /etc/systemd/system/caddy.service
+  142  sudo chmod 644 /etc/systemd/system/caddy.service
+  143  sudo systemctl daemon-reload
+  144  sudo nano /var/www/localhost/index.php
+  145  ls
+  146  sudo systemctl start caddy.service
+  147  sudo systemctl enable caddy.service
+  148  sudo reboot
+  149  ls
+  150  sudo nano /var/www/localhost/index.php
+  151  ls
+  152  sudo nano /etc/caddy/Caddyfile
+  153  cd /etc/caddy
+  154  caddy
+  155  history
+  156  ls
+  157  cd
+  158  ls
+  159  cd /etc/www
+  160  cd /var/www
+  161  ls
+  162  cd localhost/
+  163  ls
+  164  cat index.html
+  165  sudo rm index.html
+  166  cd
+  167  cd /etc/caddy
+  168  caddy
+  169  cd
+  170  cd /var/www
+  171  ls
+  172  cd localhost/
+  173  ls
+  174  cd
+  175  cd /etc/caddy
+  176  ls
+  177  sudo nano Caddyfile 
+  178  sudo reboot
+  179  php
+  180  history
+  181  cd /etc/caddy
+  182  caddy
+  183  sudo chmod 666 /etc/caddy/Caddyfile
+  184  sudo reboot
+  185  cd etc/caddy
+  186  cd /etc/caddy
+  187  caddy
+  188  sudo chmod 666 /etc/systemd/system/caddy.service
+  189  sudo reboot
+  190  cd /etc/caddy
+  191  caddy
+  192  ls
+  193  cd
+  194  cd /etc/php
+  195  ls
+  196  cd 7.3/
+  197  ls
+  198  cd fpm/
+  199  ls
+  200  cd pool.d/
+  201  ls
+  202  sudo nano www.conf
+  203  ls
+  204  cd
+  205  cd /etc/caddy
+  206  caddy
+  207  sudo usermod -a -G www-data caddy
+  208  cd /etc/php/7.3/fpm/pool.d/
+  209  ls
+  210  sudo nano www.conf
+  211  cat /etc/passwd
+  212  history
+  213  ls
+  214  sudo chmod 555 /etc/systemd/system/caddy.service
+  215  sudo chmod 555 /etc/caddy/Caddyfile
+  216  sudo reboot
+  217  cd etc/caddy
+  218  cd /etc/caddy
+  219  caddy
+  220  ls
+  221  cd /etc/php/7.3/fpm/pool.d/
+  222  sudo nano www.conf
+  223  getent group www-data
+  224  cd
+  225  useradd -M -s /bin/false caddy
+  226  sudo useradd -M -s /bin/false caddy
+  227  chown -R caddy:root /etc/caddy
+  228  sudo chown -R caddy:root /etc/caddy
+  229  systemctl daemon reload
+  230  systemctl daemon-reload
+  231  sudo systemctl daemon-reload
+  232  sudo systemctl start caddy
+  233  cd /etc/caddy
+  234  caddy
+  235  sudo caddy
+  236  cd /etc/php/7.3/fpm/pool.d/
+  237  sudo nano www.conf
+  238  sudo systemctl daemon-reload
+  239  sudo caddy
+  240  cd
+  241  cd /etc/caddy
+  242  sudo caddy
+  243  sudo systemctl daemon-reload
+  244  sudo systemctl start caddy
+  245  sudo caddy
+  246  cd /etc/php/7.3/fpm/pool.d/
+  247  sudo nano www.conf 
+  248  sudo systemctl daemon-reload
+  249  sudo systemctl start caddy
+  250  cd /etc/php/7.3/
+  251  ls
+  252  cd cli
+  253  ls
+  254  cd conf.d/
+  255  ls
+  256  cd ..
+  257  ls
+  258  cd ..
+  259  ls
+  260  cd ..
+  261  ls
+  262  cd 7.3/fpm
+  263  ls
+  264  sudo nano php-fpm.conf 
+  265  exit
+  266  ls
+  267  history
+  268  sudo systemctl daemon-reload
+  269  sudo systemctl start caddy
+  270  ls
+  271  cd /etc/caddy
+  272  sudo caddy
+  273  sudo usermod -a -G www-data caddy
+  274  sudo systemctl daemon-reload
+  275  sudo systemctl start caddy
+  276  sudo caddy
+  277  sudo service php7.3-fpm restart
+  278  sudo caddy
+  279  ls
+  280  cat Caddyfile
+  281  cd
+  282  cd /etc/var
+  283  cd /etc/www
+  284  ls
+  285  cd /var/www/
+  286  ls
+  287  cd localhost/
+  288  ls
+  289  cat index.php 
+  290  cd /var/run/php/
+  291  ls
+  292  cd ..
+  293  cd
+  294  ls
+  295  cd /etc
+  296  ls
+  297  cd php
+  298  ls
+  299  cd 7.3
+  300  ls
+  301  cd fpm
+  302  ls
+  303  cd pool.d/
+  304  ls
+  305  sudo nano www.conf
+  306  cd
+  307  cd /etc/caddy
+  308  sudo caddy
+  309  cd
+  310  sudo restart php-fpm
+  311  sudo service php-fpm restart
+  312  /etc/init.d/php7.3-fpm restart
+  313  sudo /etc/init.d/php7.3-fpm restart
+  314  sudo systemctl daemon-reload
+  315  sudo systemctl start caddy
+  316  cd /etc/caddy
+  317  sudo caddy
+  318  cd /var/run/php/
+  319  ls
+  320  cd ..
+  321  ls
+  322  cd php
+  323  ls
+  324  cd
+  325  ls
+  326  cd /etc/php
+  327  ls
+  328  cd 7.3
+  329  ls
+  330  cd fpm
+  331  ls
+  332  cd pool.d/
+  333  ls
+  334  sudo nano www.conf 
+  335  cd
+  336  sudo systemctl daemon-reload
+  337  sudo systemctl start caddy
+  338  cd /etc/caddy
+  339  sudo caddy
+  340  sudo chown -R root:www-data /etc/caddy
+  341  sudo chown www-data:www-data /etc/caddy/Caddyfile
+  342  sudo chmod 444 /etc/caddy/Caddyfile
+  343  sudo chown -R www-data:www-data /var/www
+  344  sudo chmod -R 555 /var/www
+  345  sudo chown root:root /etc/systemd/system/caddy.service
+  346  sudo chmod 644 /etc/systemd/system/caddy.service
+  347  sudo systemctl daemon-reload
+  348  sudo systemctl start caddy.service
+  349  ls
+  350  sudo caddy
+  351  sudo reboot
+  352  ls
+  353  sudo systemctl daemon-reload
+  354  sudo systemctl start caddy.service
+  355  cd /etc/caddy
+  356  caddy
+  357  sudo caddy
+  358  ls
+  359  cd 
+  360  ls
+  361  cd /etc/php
+  362  ls
+  363  cd 7.3
+  364  ls
+  365  cd fpm
+  366  ls
+  367  cd conf.d
+  368  ls
+  369  cd ..
+  370  ls
+  371  sudo nano php-fpm.conf 
+  372  cd pool.d/
+  373  ls
+  374  sudo nano www.conf 
+  375  ls
+  376  cd
+  377  sudo systemctl daemon-reload
+  378  sudo systemctl start caddy.service
+  379  cd /etc/caddy
+  380  sudo caddy
+  381  cd
+  382  ls
+  383  cd /etc/php/7.3
+  384  ls
+  385  cd fpm
+  386  ls
+  387  cd pool.d/
+  388  ls
+  389  sudo nano www.conf 
+  390  cd
+  391  sudo systemctl daemon-reload
+  392  sudo systemctl start caddy.service
+  393  ls
+  394  cd /etc/caddy
+  395  sudo caddy
+  396  caddy -service start
+  397  ls
+  398  cat /etc/passwd
+  399  cd /etc/php/7.3/fpm/pool.d/
+  400  sudo nano www.conf 
+  401  cd
+  402  ls
+  403  sudo systemctl daemon-reload
+  404  sudo systemctl start caddy.service
+  405  cd /etc/caddy
+  406  sudo caddy
+  407  ls
+  408  cat Caddyfile 
+  409  exit
+  410  ls
+  411  php -v
+  412  cat /etc/passwd
+  413  uptime
+  414  whoami
+  415  su - caddy
+  416  sudo -u caddy
+  417  sudo -u caddy zsh
+  418  sudo su - caddy
+  419  ls
+  420  whoami
+  421  cat caddy.service 
+  422  sudo nano caddy.service 
+  423  cd /etc/systemd/system
+  424  ls
+  425  sudo nano caddy.service 
+  426  sudo systemd daemon-reload
+  427  sudo systemtcl daemon-reload
+  428  sudo systemctl daemon-reload
+  429  sudo systemctl start caddy.service
+  430  cd /etc/caddy
+  431  sudo caddy
+  432  ls
+  433  cd /etc/systemd/system
+  434  ls
+  435  sudo nano caddy.service 
+  436  cd
+  437  ls
+  438  ls -l caddy.service 
+  439  sudo chmod 644 /etc/systemd/system/caddy.service
+  440  ls -l caddy.service 
+  441  sudo chown root:root /etc/systemd/system/caddy.service 
+  442  ls -l caddy.service 
+  443  cd /etc/systemd/system
+  444  ls
+  445  ls -l caddy.service 
+  446  sudo chown -R root:www-data /etc/caddy
+  447  sudo chown www-data:www-data /etc/caddy/Caddyfile 
+  448  sudo chmod 444 /etc/caddy/Caddyfile 
+  449  sudo chown -R www-data:www-data /var/www
+  450  sudo chmod -R 555 /var/www
+  451  sudo chown root:root /etc/systemd/system/caddy.service 
+  452  sudo chmod 644 /etc/systemd/system/caddy.service 
+  453  sudo systemctl daemon-reload
+  454  cd
+  455  ls
+  456  cd /var/www/localhost
+  457  ls
+  458  cat index.php 
+  459  ls
+  460  cd
+  461  ls
+  462  cd /etc/caddy
+  463  ls
+  464  cat Caddyfile 
+  465  ls
+  466  history
+  467  ls
+  468  cat caddy.service
+  469  ls
+  470  cd /etc/caddy
+  471  ls
+  472  cat Caddyfile 
+  473  cd /var/www
+  474  ls
+  475  cd localhost/
+  476  ls
+  477  cat index.php
+  478  sudo systemctl reload-daemon
+  479  sudo systemctl daemon-reload
+  480  sudo systemctl start caddy.service
+  481  ls
+  482  cd
+  483  cd /etc/
+  484  ls
+  485  cd php
+  486  ls
+  487  cd 7.3/fpm
+  488  ls
+  489  sudo nano php-fpm.conf 
+  490  ls
+  491  cd pool.d/
+  492  ls
+  493  sudo nano www.conf 
+  494  ls
+  495  cd
+  496  sudo systemctl daemon-reload
+  497  sudo systemctl start caddy.service
+  498  cd /etc/caddy
+  499  sudo caddy
+  500  ls
+  501  sudo nano Caddyfile 
+  502  sudo caddy
+  503  ls
+  504  cd /var/www
+  505  ls
+  506  cd localhost/
+  507  ls
+  508  sudo nano index.html
+  509  cd /etc/caddy
+  510  sudo caddy
+  511  sudo nano Caddyfile 
+  512  ls
+  513  sudo systemctl daemon-reload
+  514  sudo systemctl start caddy.service
+  515  caddy
+  516  sudo caddy
+  517  ls
+  518  cd
+  519  cd /etc/php
+  520  ls
+  521  cd 7.3
+  522  ls
+  523  cd fpm
+  524  ls
+  525  cd conf.d
+  526  ls
+  527  cd ..
+  528  ls
+  529  sudo nano php
+  530  sudo nano php-fpm.conf 
+  531  cd /var/log
+  532  ls
+  533  cat daemon.log 
+  534  sudo systemctl daemon-reload
+  535  cat daemon.log 
+  536  tail daemon.log 
+  537  sudo systemctl start caddy.service
+  538  tail daemon.log 
+  539  ls
+  540  cat php7.3-fpm.log 
+  541  sudo cat php7.3-fpm.log 
+  542  ls
+  543  tail daemon.log 
+  544  cd /usr/local/bin
+  545  ls
+  546  cd caddy
+  547  ls
+  548  caddy
+  549  sudo caddy
+  550  ls
+  551  cls
+  552  clear
+  553  ls
+  554  cd
+  555  ls
+  556  sudo nano caddy.service 
+  557  cd /etc/ssl
+  558  ls
+  559  mkdir caddy
+  560  sudo mkdir caddy
+  561  cd 
+  562  ls
+  563  sudo systemctl daemon-reload
+  564  sudo systemctl start caddy.service -v
+  565  sudo systemctl start caddy.service
+  566  cd /etc/caddy
+  567  ls
+  568  sudo caddy
+  569  ls
+  570  cd /var/www
+  571  ls
+  572  cd localhost/
+  573  ls
+  574  rm index.html 
+  575  sudo rm index.html 
+  576  ls
+  577  cd
+  578  sudo caddy
+  579  cd /etc/caddy
+  580  sudo caddy
+  581  ls
+  582  sudo systemctl daemon-reload
+  583  ls
+  584  sudo caddy
+  585  sudo nano Caddyfile 
+  586  sudo systemctl daemon-reload
+  587  sudo systemctl start caddy.service
+  588  sudo caddy
+  589  sudo nano Caddyfile 
+  590  sudo caddy
+  591  sudo nano Caddyfile 
+  592  sudo caddy
+  593  ls
+  594  cat error.log 
+  595  ls
+  596  composer global update
+  597  caddy service php restart
+  598  sudo caddy
+  599  sudo nano Caddyfile 
+  600  ls
+  601  sudo systemctl daemon-reload
+  602  ls
+  603  sudo systemctl daemon-reload
+  604  sudo systemctl start caddy.service
+  605  sudo caddy
+  606  caddy reload
+  607  caddy help
+  608  sudo caddy help
+  609  caddy
+  610  sudo caddy
+  611  ls
+  612  cat error.log 
+  613  ls
+  614  cd
+  615  ls
+  616  rm caddy.service 
+  617  sudo rm caddy.service 
+  618  ls
+  619  cd /etc/systemd/system
+  620  ls
+  621  sudo nano caddy.service 
+  622  cd
+  623  cd /etc/php/3.7
+  624  ls
+  625  cd /etc/php
+  626  ls
+  627  cd 7.3
+  628  ls
+  629  cd cli
+  630  ls
+  631  cd conf.d/
+  632  ls
+  633  cd ..
+  634  ls
+  635  cat php.ini 
+  636  ls
+  637  cd ..
+  638  ls
+  639  cd fpm
+  640  ls
+  641  sudo nano php-fpm.conf 
+  642  cd /run/php
+  643  ls
+  644  cat php7.3-fpm.
+  645  cat php7.3-fpm.pid 
+  646  cd
+  647  cd /var/www
+  648  ls
+  649  cd localhost/
+  650  ls
+  651  cd
+  652  ls
+  653  cd /etc/php/7.3ls
+  654  cd /etc/php/7.3
+  655  ls
+  656  cd fpm
+  657  ls
+  658  cd pool.d/
+  659  ls
+  660  sudo nano www.conf 
+  661  sudo caddy
+  662  ls
+  663  cd
+  664  sudo systemctl daemon-reload
+  665  sudo systemctl start caddy.service
+  666  cd /etc/caddy
+  667  ls
+  668  cat error.log 
+  669  ls
+  670  sudo caddy
+  671  sudo systemctl stop caddy.service
+  672  sudo caddy
+  673  ls
+  674  cat error.log 
+  675  ls
+  676  sudo nano Caddyfile 
+  677  ls
+  678  sudo caddy
+  679  sudo systemctl daemon-reload
+  680  sudo systemctl start caddy.service
+  681  ls
+  682  cat error.log 
+  683  cd
+  684  cd /etc/systemd
+  685  ls
+  686  cd system
+  687  sl
+  688  ls
+  689  sudo nano caddy.service 
+  690  cd
+  691  cd /etc/
+  692  ls
+  693  cd ssl
+  694  ls
+  695  cd caddy/
+  696  ls
+  697  ls -a
+  698  cd ..
+  699  l
+  700  ls
+  701  cd
+  702  ls
+  703  caddy
+  704  sudo caddy
+  705  cd /etc/caddy
+  706  ls
+  707  sudo systemctl daemon-reload
+  708  ls
+  709  sudo nano Caddyfile 
+  710  sudo systemctl daemon-reload
+  711  sudo caddy
+  712  sudo nano Caddyfile 
+  713  cd /var/www
+  714  ls
+  715  cd localhost/
+  716  ls
+  717  sudo nano index.html
+  718  cd
+  719  cd /etc/caddy
+  720  sudo caddy
+  721  ls
+  722  sudo nano Caddyfile 
+  723  sudo caddy
+  724  sudo nano Caddyfile 
+  725  sudo caddy
+  726  sudo nano Caddyfile 
+  727  ls
+  728  cat access.log 
+  729  sudo caddy
+  730  ls
+  731  cat error.log 
+  732  ls
+  733  cat access.log 
+  734  clear
+  735  ls
+  736  sudo nano Caddyfile 
+  737  ls
+  738  sudo nano Caddyfile 
+  739  ls
+  740  cd /systemd/system
+  741  ls
+  742  cd /etc/systemd
+  743  cd system/
+  744  ls
+  745  sudo nano caddy.service 
+  746  sudo systemd daemon-reload
+  747  sudo systemctl daemon-reload
+  748  sudo systemctl start caddy.service
+  749  ls
+  750  sudo systemctl stop caddy.service
+  751  sudo nano caddy.service 
+  752  sudo systemctl daemon-reload
+  753  sudo systemctl start caddy.service
+  754  ls
+  755  clear
+  756  ls
+  757  cd /etc/caddy
+  758  ls
+  759  cd /etc/systemd/system
+  760  sudo nano caddy.service 
+  761  ls
+  762  cd
+  763  ls
+  764  cd /etc/caddy
+  765  caddy -service install
+  766  ls
+  767  caddy -service install -agree -conf /etc/caddy/Caddyfile
+  768  ls
+  769  caddy -service start
+  770  ls
+  771  sudo caddy
+  772  sudo systemctl daemon-reload
+  773  sudo systemctl start caddy
+  774  ls
+  775  tail error.log 
+  776  sudo caddy
+  777  tail error.log 
+  778  ls
+  779  tail access
+  780  tail access.log
+  781  ls
+  782  cd /etc/systemd
+  783  ls
+  784  cd system
+  785  ls
+  786  sudo systemctl daemon-reload
+  787  sudo systemctl start caddy.service
+  788  cd
+  789  cd /etc/caddy
+  790  sudo caddy
+  791  ls
+  792  cd /etc/www
+  793  cd /etc/systemd/system
+  794  ls
+  795  sudo nano caddy.service 
+  796  ls
+  797  cd
+  798  history
+  799  cd var/log
+  800  cd /var/log
+  801  ls
+  802  tail daemon.log 
+  803  cd /etc/caddy
+  804  sudo nano Caddyfile 
+  805  sudo systemctl daemon-reload
+  806  cd /var/log
+  807  tail daemon.log 
+  808  sudo systemctl start caddy.service
+  809  tail daemon.log 
+  810  ls
+  811  cd
+  812  ls
+  813  sudo systemctl enable caddy.service
+  814  sudo reboot
+  815  ls
+  816  cd terminal_history/
+  817  ls
+  818  history >> dec20191.txt
+  819  ls
+  820  pwd
+  821  whoami
+  822  cd /var/www
+  823  pwd
+  824  ls
+  825  cd localhost/
+  826  ls
+  827  history
+  828  clear
+  829  ls
+  830  cd
+  831  ls
+  832  cd /var/log
+  833  ls
+  834  tail daemon.log 
+  835  tail php7.3-fpm.log 
+  836  sudo tail php7.3-fpm.log 
+  837  sudo systemctl stop caddy.service
+  838  sudo tail php7.3-fpm.log 
+  839  tail daemon.log 
+  840  cd /etc/caddy
+  841  ls
+  842  sudo caddy
+  843  cd /var/log
+  844  ls
+  845  sudo tail php7.3-fpm.log 
+  846  sudo systemctl daemon-reload
+  847  sudo tail php7.3-fpm.log 
+  848  sudo systemctl start caddy.service
+  849  sudo tail php7.3-fpm.log 
+  850  tail daemon.log 
+  851  sudo systemctl stop caddy.service
+  852  ls
+  853  sudo shutdown
+  854  ls
+  855  cd /etc/php/7.3/
+  856  ls
+  857  cd fpm
+  858  ls
+  859  cat php.ini
+  860  clear
+  861  cat php.ini
+  862  exit
+  863  ls
+  864  cd terminal_history/
+  865  ls
+  866  head dec20191.txt 
+  867  history
+  868  ls
+  869  history > dec201926.txt
