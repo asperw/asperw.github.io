@@ -21,7 +21,7 @@
                 <img src="images/In-White-128px-R.png" width="32px" height="32px" alt="Link to LinkedIn profile">
             </a>
         </div>
-        <!--version latest, brought to you by raspberry pi :)-->
+        <!--brought to you by raspberry pi :)-->
     </header>
 
     <div class="info">
@@ -118,6 +118,14 @@
                         A collection of projects I have worked and am working on.
                     </h4>
                     <article class="projects">
+                        <!--project entry start-->
+                        <span><a href="projects/webserver/webserver.html"><img src="projects/webserver/images/wip.JPG"
+                                    width="250" height="250" alt="Web server."></a>
+                            <img id="icon" src="projects/processing/images/rpi.jpg" width="50" height="50"
+                                alt="Raspberry pi.">
+                            <p>Setting up a web server on Raspberry Pi with Caddy 2, port forwarded to the internet</p>
+                        </span>
+                        <!--project entry end-->
                         <span><a href="projects/headless/headless.html"><img src="projects/headless/images/wip.JPG"
                                     width="250" height="250" alt="Headless raspberry pi."></a>
                             <img id="icon" src="projects/processing/images/rpi.jpg" width="50" height="50"
