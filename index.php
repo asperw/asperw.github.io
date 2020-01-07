@@ -10,7 +10,7 @@
 </head>
 
 <body id="body">
-    <?php print mime_content_type("styles.css");?>
+    <?php echo "test";?>
     <header>
         <h1 id="home">William Asper</h1>
         <div>
@@ -38,7 +38,7 @@
             <div id="containers">
                 <div id="tabPane1">
                     <h3>Hello world</h3>
-                    <p>I am a graduating computer engineering major with a concentration in robotics and control at the University of California, Santa Cruz. I am currently searching for full-time positions..</p>
+                    <p>I am a graduating computer engineering major with a concentration in robotics and control at the University of California, Santa Cruz. I am currently searching for full-time positions.</p>
                 </div>
                 <div id="tabPane2">
                     <h3>Education</h3>
@@ -115,11 +115,11 @@
                 <div id="tabPane4">
                     <h3>Projects</h3>
                     <h4>
-                        A collection of projects I have worked and am working on.
+                        Stuff I'm working on.
                     </h4>
                     <article class="projects">
                         <!--project entry start-->
-                        <span><a href="projects/webserver/webserver.html"><img src="projects/webserver/images/wip.JPG"
+                        <span><a href="projects/webserver/webserver.html"><img src="projects/webserver/images/pi.jpg"
                                     width="250" height="250" alt="Web server."></a>
                             <img id="icon" src="projects/processing/images/rpi.jpg" width="50" height="50"
                                 alt="Raspberry pi.">

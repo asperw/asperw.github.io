@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Setting up a Headless Raspberry Pi">
     <title>Set up Headless Pi | William Asper</title>
-    <link rel="stylesheet" href="blogstyle.css" type="text/css">
+    <link rel="stylesheet" href="../blogstyle.css" type="text/css">
 </head>
 
 <body>
@@ -59,21 +59,19 @@
         </p>
         <p>You may need to eject your card and re-insert it into your PC to find the <b>/boot</b> directory.</p>
         <p>Start by making a notepad file with the lines:</p>
-        <div class="two">
-            <div class="text">
-                <pre>
-                    <code>
-                        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-                        update_config=1
-                        country=US
+        <div class="text">
+            <pre>
+                <code>
+                    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+                    update_config=1
+                    country=US
                         
-                        network={
-                          ssid="&ltName of your WiFi&gt"
-                          psk="&ltPassword for your WiFi&gt"
-                        }
-                    </code>
-                </pre>
-            </div>
+                    network={
+                        ssid="&ltName of your WiFi&gt"
+                        psk="&ltPassword for your WiFi&gt"
+                    }
+                </code>
+            </pre>
         </div>
         <p>Save this file as <b>"wpa_supplicant.conf"</b> in the /boot directory.</p>
         <p>Rasbian needs an empty, extensionless file named <b>" ssh. "</b> in the /boot directory of the SD card to enable SSH. To do this on Windows, open Notepad and save a blank file with the name <b>" ssh. "</b> and choose <b>All Files</b> for the Save

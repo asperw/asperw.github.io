@@ -15,126 +15,208 @@
     </center>
 
     <h2>Goal:</h2>
-    <p>Our goal is to set up a Raspberry Pi to be headless, or without a monitor, that we can connect to through SSH. This will be very useful for setting up Raspberry Pi Zero W boards because these use mini HDMI for display out, and you need a USB-OTG adapter
-        to connect a mouse and keyboard. You can set up any Raspberry Pi board in this way.
-    </p>
-    <p>I am using Windows to set this up, but these steps are straightforward enough that you can do it on Mac or Linux.
-    </p>
+    <p>Our goal is to set up a Raspberry Pi web server that we can use to put simple pages or applications on the internet.</p>
+    <p>I will go over how I set up my personal web page, but Caddy 2 is highly adaptable to your use.</p>
 
     <h2>Materials:</h2>
     <ol>
         <li>Raspberry Pi that can connect to the internet (using built-in Wi-Fi or a dongle)</li>
-        <li>Good quality SD card</li>
-        <li>Micro-USB power supply for powering the board</li>
+        <li>Optional: a domain name</li>
     </ol>
 
     <h2>Software Used:</h2>
     <ol>
+        <li><a href="https://caddyserver.com/">Caddy 2</a></li>
         <li>PuTTY (or another SSH client). <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a></li>
-        <li><a href="https://sourceforge.net/projects/win32diskimager/files/latest/download">Win32 Disk Imager</a></li>
     </ol>
 
     <hr>
 
-    <h3>Step 1:</h3>
-    <p>The first step is to download the operating system the Raspberry Pi will use, I chose to use Raspbian, the official Raspberry Pi operating system. You could use another operating system, but the steps to set up SSH may be slightly different. <a href="https://www.raspberrypi.org/downloads/raspbian/">Get Raspbian.</a>        Since we are setting up our Pi to work headless, we can choose the "lite" version of whatever operating system because we do not need the desktop features. This saves space on our SD card, too.
-    </p>
-
-    <h3>Step 2:</h3>
-    <p>Next, use Win32 Disk Imager to write the operating system to the SD card.</p>
+    <!--
+    <h3></h3>
     <div class="two">
         <div class="image">
-            <img src="images/win32disk.JPG" alt="Windows thirty two disk imager.">
+            <img src="images/ " alt=" ">
         </div>
         <div class="text">
-            <p>Select the downloaded operating system image with the blue folder icon.</p>
-            <p><b>Make sure the correct drive is selected!</b></p>
-            <p>Click "Write" to write the operating system to the SD card. This will take a while.</p>
-        </div>
-    </div>
+            <p>
 
-    <h3>Step 3:</h3>
-    <div class="block">
-        <p>Next, we need to create two files that will let us connect to WiFi and use SSH on the Raspberry Pi. To improve security of connected devices, your Raspberry Pi operating system will most likely have SSH disabled by default.
-        </p>
-        <p>You may need to eject your card and re-insert it into your PC to find the <b>/boot</b> directory.</p>
-        <p>Start by making a notepad file with the lines:</p>
-        <div class="two">
-            <div class="text">
-                <pre>
-                    <code>
-                        ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-                        update_config=1
-                        country=US
-                        
-                        network={
-                          ssid="&ltName of your WiFi&gt"
-                          psk="&ltPassword for your WiFi&gt"
-                        }
-                    </code>
-                </pre>
-            </div>
-        </div>
-        <p>Save this file as <b>"wpa_supplicant.conf"</b> in the /boot directory.</p>
-        <p>Rasbian needs an empty, extensionless file named <b>" ssh. "</b> in the /boot directory of the SD card to enable SSH. To do this on Windows, open Notepad and save a blank file with the name <b>" ssh. "</b> and choose <b>All Files</b> for the Save
-            as type. Move this file to the /boot directory. <b>note: the " . " at the end of ssh is important when
-                saving the SSH file otherwise Windows will make this a text file, even if we choose All Files for the
-                Save as type.</b>
-        </p>
-        <p>Congratulations, you are now ready to plug in your Raspberry Pi!</p>
-    </div>
-
-    <h3>Step 4:</h3>
-    <p>Now we will plug in the Raspberry Pi to a power supply. While the Raspberry Pi boots for the first time, we need to find the IP address of the Pi. There are many ways to do this, I logged into my home router to look at the connected devices because
-        this was easiest for me to do.
-    </p>
-    <div class="two">
-        <div class="text">
-            <p>This is what I see when I look into connected devices on my home router.</p>
-            <p>What we are looking for is the IP Address so we know what to SSH to later.</p>
-            <p>Here, my Raspberry Pi's address is 192.168.1.116.
             </p>
         </div>
-        <div class="image">
-            <img src="images/ip.JPG" alt="Router connected devices.">
-        </div>
     </div>
 
-    <h3>Step 5:</h3>
-    <p>The next step is to open our SSH client and attempt to log into the Pi.</p>
-    <div class="two">
-        <div class="text">
-            <p>This is the main screen of PuTTY. All we need to do to connect to the Pi is put the IP address.</p>
-            <p>If you want to save the IP address to connect easily in the future, enter a name for the connection in the Saved Sessions box and click Save.</p>
-            <p>In the future, we can open a connection to this IP address by double-clicking the saved session name.</p>
-        </div>
-        <div class="image">
-            <img src="images/putty.JPG" alt="Putty main screen.">
-        </div>
-    </div>
-    <div class="two">
-        <div class="text">
-            <p>If you see this, congratuations! You have now connected to your Raspberry Pi over SSH.</p>
-            <p>The next steps are to <b>change the default password</b> and set a static IP address.</p>
-            <p>The default login for the Raspberry Pi is user: pi, password: raspberry</p>
-        </div>
-        <div class="image">
-            <img src="images/blank_login.PNG" alt="Blank login screen.">
-        </div>
-    </div>
 
-    <h3>Step 6:</h3>
-    <p>The next step is to change the default password for the Raspberry Pi. This is important to do because anyone on your network could log in to the Raspberry Pi.
+    <h3></h3>
+    <div class="block">
+        <div class="text">
+            <pre>
+                <code>
+
+                </code>
+            </pre>
+        </div>
+    </div>
+    -->
+
+    <h3>Step 1: Install Go and build Caddy 2 from source</h3>
+    <div class="block">
+        <p>
+            Caddy 2 is in beta, but it is a fully functional open source web server with automatic HTTPS.
+        </p>
+        <p>To get Caddy, we need to install Go first.</p>
+        <div class="text">
+            <pre>
+                <code>
+                    $ wget https://dl.google.com/go/go1.13.5.linux-armv6l.tar.gz
+                    $ sudo tar -C /usr/local -xzf go1.13.5.linux-armv6l.tar.gz
+                    $ rm go1.13.5.linux-armv6l.tar.gz
+                </code>
+            </pre>
+        </div>
+        <p>We need to update our PATH to point to where Go is and where we will be working when we build Caddy.</p>
+        <div class="text">
+            <pre>
+                <code>
+                    $ nano ~/.profile
+                </code>
+            </pre>
+        </div>
+        <p>Scroll to the bottom and add these two lines. You can substitute the GOPATH to any directory where you want to work in.</p>
+        <div class="text">
+            <pre>
+                <code>
+                    PATH=$PATH:/usr/local/go/bin
+                    GOPATH=$HOME/web
+                </code>
+            </pre>
+        </div>
+        <p>Now go to this GOPATH directory and clone the Caddy repository.</p>
+        <div class="text">
+            <pre>
+                <code>
+                    $ git clone -b v2 "https://github.com/caddyserver/caddy.git caddy_git"
+                    $ cd caddy_git/cmd/caddy/
+                    $ go build
+                </code>
+            </pre>
+        </div>
+        <p>This builds the caddy executable. Move this to where you want it. I put it on the same level as my website's repository, so my files look like this:</p>
+        <div class="text">
+            <pre>
+                <code>
+                    ~
+                    |__ go
+                    |   |__ bin
+                    |   |__ pkg
+                    |__ web
+                        |__ &ltmy website's repository&gt
+                        |__ caddy
+                        |__ caddy_git
+                </code>
+            </pre>
+        </div>
+    </div>
+    <h3>Step 2: Make a basic config file for Caddy</h3>
+    <div class="block">
+        <p>Now that Caddy is ready for use, we need to write a config file. Caddy is configured while running by sending a POST request to a REST API. These updates can be done on the fly, which makes developing with Caddy very nice as our updates are visible
+            right away.
+        </p>
+        <p>Caddy 2's config files are written in plain JSON. The excellent <a href="https://github.com/caddyserver/caddy/wiki/v2:-Documentation">documentation</a> has the complete config spec and some examples.</p>
+        <p>Make a file called caddy.json:</p>
+        <div class="text">
+            <pre>
+                <code>
+                    {
+                        "apps": {
+                            "http": {
+                                "servers:" {
+                                    "&ltany name here&gt e.g. myserver": {
+                                        "listen": ["&ltyour pi's local IP&gt:2080"],
+                                        "routes": [{
+                                            "handle": [{
+                                                "handler": "file_server",
+                                                "root": "&ltpath to a folder relative to your caddy executable&gt",
+                                                "index_names": ["&lta file to display&gt e.g. index.php"],
+                                                "browse": {}
+                                            }]
+                                        }]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+        </div>
+        <p>This config file makes a file server served on port 2080, that displays the file specified.</p>
+        <p>To use this configuration:</p>
+        <div class="text">
+            <pre>
+                <code>
+                    $ ./caddy start
+                    $ curl -X POST "http://localhost:2019/load" -H "Content-Type: application/json" -d @caddy.json
+                </code>
+            </pre>
+        </div>
+        <p>Now navigate to the IP of the Raspberry Pi on your local network, using the port 2080, e.g. "10.0.0.208:2080". You should see your page displayed.</p>
+        <p>To stop Caddy:</p>
+        <div class="text">
+            <pre>
+                <code>
+                    $ ./caddy stop
+                </code>
+            </pre>
+        </div>
+    </div>
+    <h3>Step 3: adding a port forward to the Raspberry Pi</h3>
+    <p>Adding a port forward to your Raspberry Pi means the ports specified will be available externally, so you won't have to be on the local network to make changes and to see the server. Adding a port forward creates a security risk, so make sure to take
+        that into consideration and change the default password on the Pi.
     </p>
+    <p>Port forwarding is going to vary by ISP, but this is what I was able to do on xfinity xFi app:</p>
     <div class="two">
-        <div class="text">
-            <p>To change the password, use the command <b>passwd</b> and follow the prompts.</p>
-        </div>
         <div class="image">
-            <img src="images/change_passwd.PNG" alt="Change the password.">
+            <img src="images/add_port.jpg" alt="Adding ports." width="400">
+        </div>
+        <div class="text">
+            <p>To find Add Port Forward navigate through Network and Advanced Settings to Port Forwarding.
+            </p>
+            <p>To get the above example working, add port 2080.</p>
+            <p>The HTTP/HTTPS ports 80/443 can be forwarded too.</p>
         </div>
     </div>
-
+    <h3>Step 4: Use your domain</h3>
+    <div class="block">
+        <p>To have our web server served over the internet with a custom domain, we only need to make a few changes to the caddy.json file made earlier.</p>
+        <div class="text">
+            <pre>
+                <code>
+                    {
+                        "apps": {
+                            "http": {
+                                "servers:" {
+                                    "&ltany name here&gt e.g. myserver": {
+                                        "listen": [":443"],
+                                        "routes": [{
+                                            "match": [{
+                                                "host": ["&ltyour domain&gt", "www.&ltyour domain&gt"]
+                                            }],
+                                            "handle": [{
+                                                "handler": "file_server",
+                                                "root": "&ltpath to a folder relative to your caddy executable&gt",
+                                                "index_names": ["&lta file to display&gt e.g. index.php"],
+                                                "browse": {}
+                                            }]
+                                        }]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                </code>
+            </pre>
+        </div>
+        <p>If your DNS are pointed to the Raspberry Pi, Caddy will serve the web server on the internet with HTTPS.</p>
+    </div>
 </body>
 
 </html>
