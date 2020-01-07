@@ -121,7 +121,7 @@
                         <!--project entry start-->
                         <span><a href="projects/webserver/webserver.html"><img src="projects/webserver/images/pi.jpg"
                                     width="250" height="250" alt="Web server."></a>
-                            <img id="icon" src="projects/processing/images/rpi.jpg" width="50" height="50"
+                            <img id="icon" src="projects/webserver/images/rpi.jpg" width="50" height="50"
                                 alt="Raspberry pi.">
                             <p>Setting up a web server on Raspberry Pi with Caddy 2, port forwarded to the internet</p>
                         </span>
