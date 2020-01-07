@@ -19,6 +19,9 @@ header {
     display: flex;
 }
 
+
+/* social icons */
+
 header>div {
     display: flex;
     flex: 1;
@@ -157,4 +160,19 @@ div.info {
     top: -25px;
     border-radius: 50%;
     height: 50px;
+}
+
+
+/* ///////////////// profile area /////////// */
+
+#pfp {
+    padding: 0 50px 0 0;
+    float: right;
+    border-radius: 50%;
+}
+
+#bio {
+    padding: 0 0 0 50px;
+    float: left;
+    max-width: 40%;
 }

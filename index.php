@@ -38,7 +38,15 @@
             <div id="containers">
                 <div id="tabPane1">
                     <h3>Hello world</h3>
-                    <p>I am a graduating computer engineering major with a concentration in robotics and control at the University of California, Santa Cruz. I am currently searching for full-time positions.</p>
+                    <div class="two">
+                        <div class="pfp">
+                            <img src="images/pfp.jpg" alt="Profile.">
+                        </div>
+                        <div class="bio">
+                            <p>I am a graduating computer engineering major with a concentration in robotics and control at the University of California, Santa Cruz. I am currently searching for full-time positions.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div id="tabPane2">
                     <h3>Education</h3>
