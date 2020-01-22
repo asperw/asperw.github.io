@@ -188,7 +188,7 @@
                     </article>
                 </div>
                 <div id="tabPane3">
-                    <iframe src="https://docs.google.com/viewer?srcid=1hCAyyg7Fbw98yeviN7DEIqPUhsqrzL0Z&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="100%" height="1100px" border:none></iframe>
+                    <iframe src="https://docs.google.com/viewer?srcid=12M-e3_hnjXrfNnyTNbnF4Rrlu1UgYmuy&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="100%" height="1100px" border:none></iframe>
                 </div>
                 <!--
                 <div id="tabPane5">
