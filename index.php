@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="This is my website.">
+    <meta name="description" content="Looking for full time software/hardware positions.">
     <title>Hello | William Asper</title>
     <link rel="stylesheet" href="styles.css" type="text/css"/>
 </head>
