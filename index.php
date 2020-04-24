@@ -73,6 +73,8 @@
                             <li>CMPE 216 Bio-inspired Locomotion</li>
                             <li>CMPE 167 Sensing and Sensor Technologies</li>
                             <li>ECE 141 Feedback Control Systems</li>
+                            <li>ECE 9 Statics and Mechanics of Materials</li>
+                            <li>CSE 195 Senior Thesis Research</li>
                         </ul>
                         <ul class="languages">
                             <li>C, Java</li>
@@ -94,18 +96,18 @@
                             <li></li>
                             <li></li>
                             <li></li>
+                            <li></li>
+                            <li></li>
                         </ul>
                     </article>
                     <hr>
                     <h4>Relevant courses in progress at UCSC:</h4>
                     <article class="coursework">
                         <ul class="courses">
-                            <li>ECE 9 Statics and Mechanics of Materials</li>
-                            <li>CSE 195 Senior Thesis Research</li>
+                            <li>Just graduated!</li>
                         </ul>
                         <ul class="languages">
-                            <li></li>
-                            <li></li>
+                            <li>:)</li>
                         </ul>
                     </article>
                     <hr>
